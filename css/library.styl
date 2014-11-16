@@ -1,0 +1,139 @@
+@import 'nib/vendor'
+@import 'nib/gradients'
+@import 'units'
+@import 'lz-text'
+@import 'lz-grid'
+@import 'lz-graph'
+@import 'lz-buttons'
+@import 'lz-forms'
+
+vendor-prefixes = o ms webkit moz official
+
+
+/*********************************
+  Global: Layout
+**********************************/
+
+html
+  height: 100%
+
+*
+  -ms-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+article,
+aside,
+blockquote,
+dd,
+div,
+dl,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+noscript,
+ol,
+output,
+p,
+pre,
+section,
+table,
+tfoot,
+ul,
+video
+  position: relative
+
+// mixins
+
+hover-col(color, fontw, text-decoration)
+	&:hover	
+		color color
+		font-weight fontw
+		text-decoration underline
+		
+marginToPaddingHor(initialMargin)
+	newPadding = (100 - initialMargin)/2
+	margin-left 0
+	margin-right 0
+	padding-left newPadding
+	padding-right newPadding
+
+// global clases
+
+.inactive
+	display none
+
+.invisible
+	visibility hidden
+
+input
+select
+	border 1px solid greyMedium
+	background-color white
+	border-radius 5px
+	color greyDark
+	height heightForm
+		
+.button
+	background linear-gradient(90deg, #3399cc 0%,#006699 100%)
+	border none
+	border-radius 5px
+	color white
+	display block
+	height heightForm
+	font-weight 500
+	font-size 15px
+	width 30%
+
+header
+	left 0
+	position fixed
+	right 0
+	top 0
+	z-index backgroundHeaderZIndex
+	#lz-header-Content
+		position absolute
+		z-index contentHeaderZIndex
+		left 0
+		right 0
+		#lz-header-Logo
+			position relative
+			.logo
+				margin-left 0
+				margin-right 0
+
+.lzgraph
+	position relative
+	z-index  lzgraphZIndex
+	
+.logo
+	.lz-logo-desktop
+	.lz-logo-tablet
+	.lz-logo-phone
+		position relative
+		z-index contentHeaderZIndex
+
+.canvas
+	z-index 64
+	width 100vw
+	height 100vh
+	overflow hidden
+	position fixed
+	top 0
+	left 0
+	right 0
+	bottom 0
+	
+

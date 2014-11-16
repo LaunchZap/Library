@@ -1,0 +1,3530 @@
+/*********************************
+  Global: Layout
+*/
+html
+  height: 100%
+
+*
+  -ms-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+article,
+aside,
+blockquote,
+dd,
+div,
+dl,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+noscript,
+ol,
+output,
+p,
+pre,
+section,
+table,
+tfoot,
+ul,
+video
+  position: relative
+
+.container:before,
+.container:after,
+.columns:before,
+.columns:after
+  content: " "
+  display: table
+
+.container:after,
+.columns:after
+  clear: both
+
+.container,
+.columns
+  *zoom: 1
+
+.columns
+  display: block
+  margin-left: -0.5rem
+  margin-right: -0.5rem
+
+.columns > div
+  display: block
+  float: left
+  padding-left: 0.5rem
+  padding-right: 0.5rem
+  width: 33%
+
+.frame
+  overflow: hidden
+
+.screen-reader-text
+  position: absolute
+  left: -99999px
+  top: -99999px
+
+
+/*********************************
+  RSS and Follow
+*/
+a.rss
+  text-indent: -2000em
+  direction: ltr
+  overflow: hidden
+  display: inline-block
+  width: 30px
+  height: 20px
+  font-size: 6px
+  border-left: 1px solid #ddd
+  margin-left: 10px
+  background: url(../images/icons/icon-sprite.png) no-repeat 10px -80px
+  background-image: url(../images/icons/icon-sprite.svg)
+  vertical-align: middle
+
+a.twitter-user
+  vertical-align: middle
+
+a.twitter-user:before
+  content: "."
+  display: inline-block
+  text-indent: -2000em
+  direction: ltr
+  width: 20px
+  height: 20px
+  background: url(../images/icons/icon-sprite.png) no-repeat 0 -20px
+  background-image: url(../images/icons/icon-sprite.svg)
+  margin-right: 5px
+  vertical-align: middle
+
+/*********************************
+  Main Content Area
+*/
+.content-frame
+  border-top: 1px solid transparent
+
+.content-frame .content
+  margin: 0 auto
+  width: 870px
+
+.content-frame .content.no-tertiary
+  width: 630px
+
+.content-frame .main-column
+  float: left
+  width: 630px
+
+.content-frame .tertiary
+  float: right
+  width: 150px
+
+.content-frame .content.content-wide
+  width: 870px
+
+@media screen and (max-width: 1160px)
+  .content-frame .content,
+.content-frame .content.content-wide
+    width: 630px
+
+  .content-frame .main-column
+    float: none
+    width: auto
+
+  .content-frame .tertiary
+    display: none
+
+@media screen and (max-width: 890px)
+  .content-frame .content,
+.content-frame .content.no-tertiary
+    width: 470px
+
+  .content-frame .sidebar
+    max-width: none
+    clear: left
+
+@media screen and (max-width: 740px)
+  .content-frame .content,
+.content-frame .content.no-tertiary
+    width: auto
+    margin: 0 20px
+
+.ie8 .content-frame
+  width: auto
+  margin-left: 250px
+
+.ie8 .content-frame .tertiary
+  display: none
+
+/*********/
+#body-class-surrogate,
+#title-surrogate
+  display: none
+
+.directory.pinned
+  width: 150px
+  float: right
+  margin-top: 0
+
+@media screen and (max-width: 1160px)
+  .directory
+    display: none
+
+.directory ul
+  margin-bottom: 20px
+
+.directory li
+  text-transform: uppercase
+  font-weight: 300
+  line-height: 1.8em
+
+/*********************************
+  Global: GVGraph Backgrounds
+*/
+.gvgraph
+  position: absolute
+  width: 100%
+  top: 0
+  z-index: -10
+
+.gvgraph > gvgraph
+  display: block
+
+.gvgraph .left
+  position: absolute
+  left: 0
+  top: 0
+
+.gvgraph .right
+  position: absolute
+  right: 0
+  top: 0
+
+.gvgraph .top
+  margin: 0 auto
+
+@media screen and (max-width: 740px)
+  .gvgraph
+    display: none
+
+.home .content-frame
+  background: #ffffff url(../images/home/bg.png) 100% 0 no-repeat
+
+@media screen and (max-width: 890px)
+  .home .content-frame
+    background: #fff
+
+/*********************************
+  CONTENT ICONS
+*/
+.content .icon,
+.home-content .icon
+  display: inline-block
+  position: relative
+  width: 20px
+  height: 20px
+  background: url(../images/icons/icon-sprite.png) no-repeat
+  background-image: url(../images/icons/icon-sprite.svg)
+
+.content .icon.back,
+.home-content .icon.back
+  background-position: 0 0
+
+.content .icon.twitter,
+.home-content .icon.twitter
+  background-position: 0 -20px
+
+.content .icon.web,
+.home-content .icon.web
+  background-position: 0 -40px
+
+.content .icon.video,
+.home-content .icon.video
+  background-position: 0 -140px
+
+.content .icon.linkedin,
+.home-content .icon.linkedin
+  background-position: 0 -180px
+
+.content .icon-highlight-on-hover .icon.video,
+.home-content .icon-highlight-on-hover .icon.video
+  background-position: -20px -140px
+  opacity: 0.5
+
+.content .icon-highlight-on-hover:hover .icon.video,
+.home-content .icon-highlight-on-hover:hover .icon.video
+  background-position: 0 -140px
+  opacity: 1.0
+
+.content .icon
+  top: 0.35em
+
+.home-content .icon
+  top: 0.2em
+
+/*********************************
+  Modal Windows
+*/
+.modal-backdrop
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  padding: 20px
+  background: #555
+  background: rgba(34, 34, 34, 0.75)
+  z-index: 10000
+  text-align: center
+
+.modal-backdrop:before
+  content: ""
+  display: inline-block
+  height: 100%
+  vertical-align: middle
+  margin-right: -0.25em
+
+.modal
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  max-width: 90%
+  max-height: 90%
+  z-index: 10001
+  text-align: left
+
+.modal .close
+  display: block
+  position: absolute
+  left: -30px
+  top: -30px
+  width: 30px
+  height: 30px
+  background-color: #333
+  background-color: rgba(0, 0, 0, 0.3)
+  color: #fff
+  cursor: pointer
+  font-size: 30px
+  line-height: 30px
+  text-align: center
+  opacity: 0.5
+
+.modal .close:hover
+  opacity: 1
+
+.modal-inner
+  max-width: 100%
+  max-height: 100%
+
+.modal-inner img
+  max-width: 100%
+  max-height: 100%
+
+/*********************************
+  Tooltips
+*/
+.tooltip-content
+  display: none !important
+
+.tooltip-element
+  position: absolute
+  left: 0
+  top: 0
+  width: 0
+  height: 0
+
+.tooltip-body
+  position: absolute
+  right: 20px
+  top: 0
+  background: #ebeff1
+  width: 250px
+  padding: 20px
+  color: #333
+  color: rgba(0, 0, 0, 0.6)
+  z-index: 999999
+
+.tooltip-body .partners
+  display: block
+  padding-top: 5px
+
+.tooltip-body .partners .label
+  color: #333
+  color: rgba(0, 0, 0, 0.8)
+
+.tooltip-right .tooltip-body
+  right: auto
+  left: 10px
+
+/* Point */
+.tooltip-element:after
+  content: ' '
+  display: block
+  position: absolute
+  right: 20px
+  top: 0
+  width: 9px
+  height: 9px
+  margin: -3px -5px 0 0
+  background: #ebeff1
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  -moz-transform: rotate(45deg)
+  -o-transform: rotate(45deg)
+  transform: rotate(45deg)
+
+.tooltip-right:after
+  left: 20px
+  right: auto
+  margin: 0 0 0 -5px
+
+.company-tooltip .partners
+  margin-top: 1em
+
+.company-tooltip .partners .label
+  display: inline-block
+  font-weight: bold
+  text-transform: uppercase
+  font-size: 0.75em
+  padding-right: 3px
+
+/*********************************
+  Global: Portraits w/ Geometric masks
+*/
+.portrait
+  position: relative
+
+.portrait:after
+  content: " "
+  display: block
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 30px
+  height: 15px
+  pointer-events: none
+  background: url(../images/masks/photo-corner-sw.png) no-repeat left bottom
+  background-image: url(../images/masks/photo-corner-sw.svg)
+  background-position: -54px bottom
+
+.portrait.small:after
+  background-position: -60px bottom
+
+.portrait.large:after
+  width: 80px
+  height: 50px
+  background-position: 0 bottom
+
+/*********************************
+  Global: "Graph" <hr>s
+*/
+hr.graph
+  display: block
+  border: none
+  width: 650px
+  height: 40px
+  margin: 10px -10px 45px
+  background: url(../images/graph/hr-large-1.png) no-repeat left top
+  background-image: url(../images/graph/hr-large-1.svg)
+  background-size: 100% 100%
+
+hr.graph.b
+  background-image: url(../images/graph/hr-large-2.png)
+  background-image: url(../images/graph/hr-large-2.svg)
+
+hr.graph.medium
+  width: 490px
+  background-image: url(../images/graph/hr-medium-1.png)
+  background-image: url(../images/graph/hr-medium-1.svg)
+
+hr.graph.medium.b
+  background-image: url(../images/graph/hr-medium-2.png)
+  background-image: url(../images/graph/hr-medium-2.svg)
+
+hr.graph.flex
+  width: auto
+  background-image: url(../images/graph/hr-flex-1.png)
+  background-image: url(../images/graph/hr-flex-1.svg)
+
+hr.graph.flex.b
+  background-image: url(../images/graph/hr-flex-2.png)
+  background-image: url(../images/graph/hr-flex-2.svg)
+
+@media screen and (max-width: 890px)
+  hr.graph,
+hr.graph.medium
+    width: auto
+    background-image: url(../images/graph/hr-flex-1.png)
+    background-image: url(../images/graph/hr-flex-1.svg)
+
+  hr.graph.b,
+hr.graph.medium.b
+    background-image: url(../images/graph/hr-flex-2.png)
+    background-image: url(../images/graph/hr-flex-2.svg)
+
+/*********************************
+  People Lists
+*/
+.people-list h3,
+.people-list-large h3
+  line-height: 100%
+
+.people-list h4,
+.people-list-large h4
+  color: #999
+  font-weight: 300
+
+.people-list
+  width: 680px
+  margin: 30px 0
+
+.people-list a
+  height: 100%
+  padding: 20px
+  border: 1px solid transparent
+
+.people-list a:hover
+  border-color: #bcdaed
+
+.people-list li
+  float: left
+  width: 330px
+  height: 150px
+  margin-left: -20px
+  margin-right: 30px
+  margin-bottom: 10px
+
+.people-list li p
+  font-size: 14px
+  margin-left: 80px
+  max-height: 6.2em
+  overflow: hidden
+  text-overflow: ellipsis
+
+.people-list h3
+  font-size: 18px
+  margin-bottom: 3px
+
+.people-list h4
+  font-size: 13px
+  margin-bottom: 4px
+
+.people-list .portrait
+  float: left
+  width: 70px
+  height: 70px
+  margin-right: 10px
+  background: #eee
+
+@media screen and (max-width: 890px)
+  .people-list
+    width: auto
+
+  .people-list li
+    height: auto
+    width: auto
+    float: none
+    margin-right: 0
+
+.people-list-large
+  width: 700px
+  /* Make room for wrapping */
+  margin-right: -40px
+  margin-bottom: 30px
+
+.people-list-large a
+  float: left
+  width: 330px
+  height: 270px
+  margin-left: -20px
+  margin-right: 30px
+  padding: 20px
+  border: 1px solid transparent
+  cursor: pointer
+  line-height: 1.6
+
+.people-list-large a:hover
+  border-color: #bcdaed
+
+.people-list-large h3
+  margin-bottom: 4px
+  max-width: 160px
+
+.people-list-large h4
+  font-size: 14px
+  margin-bottom: 12px
+
+.people-list-large .portrait
+  float: right
+  width: 110px
+  height: 110px
+  margin-left: 10px
+  margin-bottom: 5px
+
+.people-list-large .portrait img
+  width: 110px
+
+@media screen and (min-width: 890px)
+  .people-list-large a.managing-partner
+    float: none
+    clear: both
+    width: 670px
+    padding-top: 50px
+    position: relative
+    top: -50px
+    margin-bottom: 0px
+
+  .people-list-large a.managing-partner h3
+    font-size: 32px
+    max-width: 200px
+
+  .people-list-large a.managing-partner .portrait
+    margin-top: -30px
+    margin-left: 50px
+    width: 220px
+    height: 220px
+
+  .people-list-large a.managing-partner .portrait img
+    width: 220px
+
+@media screen and (max-width: 890px)
+  .people-list-large
+    width: auto
+    margin-right: 0
+    /*		a.managing-partner {
+			width: auto;
+			.portrait {
+				width: 110px;
+				height: 110px;
+			}
+			.portrait img {
+				width: 110px;
+			}
+		}*/
+
+  .people-list-large a
+    float: none
+    width: auto
+    height: auto
+    margin-right: 0
+    margin-bottom: 0
+
+@media screen and (max-width: 740px)
+  .people-list-large,
+.team .team-content .people-list-large
+    margin: 0 0 0 -20px
+
+  .people-list-large h3,
+.team .team-content .people-list-large h3
+    font-size: 20px
+
+  a.link-block
+    margin: 0 -2px
+    padding: 20px 0 0 0
+
+  a.link-block:hover,
+a.link-block:focus
+    border-color: #fff
+
+  .team a.link-block
+    margin-left: 18px
+
+/*********************************
+  RHS Sidebar (Blog, Studio pages)
+*/
+.sidebar
+  padding-top: 100px
+  max-width: 170px
+
+.blog-post .sidebar
+  padding-top: 25px
+
+.sidebar section
+  margin-bottom: 50px
+
+.sidebar .email input
+  display: block
+  border: 1px #b2b2b2 solid
+  font-size: 16px
+  font-weight: 300
+  padding: 7px 12px
+  width: 100%
+
+.sidebar .links
+  margin-top: 20px
+
+.sidebar .links a
+  display: block
+  position: relative
+  height: 30px
+  line-height: 30px
+  padding-left: 30px
+  white-space: nowrap
+
+.sidebar .links a:before
+  content: " "
+  display: block
+  position: absolute
+  top: 5px
+  left: 0
+  width: 20px
+  height: 20px
+  background: url(../images/icons/icon-sprite.png) no-repeat left -20px
+  background-image: url(../images/icons/icon-sprite.svg)
+
+.sidebar .links a.google-plus:before
+  background-position: 0 -60px
+
+.sidebar .links a.feed:before
+  background-position: 0 -80px
+
+.link-items .item
+  margin: 20px 0 20px 0
+
+.link-items .item span
+  display: block
+
+.link-items .item .pre
+  font-weight: 300
+
+.link-items .item .pre img
+  max-height: 20px
+  max-width: 100%
+
+.link-items .item .post
+  margin-top: 0.1em
+  font-size: 12px
+  text-transform: uppercase
+  color: #999
+
+@media screen and (max-width: 1160px)
+  .link-items .item
+    margin: 15px 0 15px 0
+
+  .link-items .item a
+    font-size: 16px
+
+@media screen and (max-width: 1160px)
+  .content-frame .sidebar
+    float: none
+    display: block
+    width: auto
+    padding-top: 90px
+    max-width: none
+    clear: left
+
+/*********************************
+  Page footer
+*/
+.page-footer
+  clear: both
+  width: 100%
+  text-align: center
+  padding-top: 160px
+  margin-bottom: 25px
+  color: #999
+  font-size: 12px
+
+.page-footer hr
+  border-top: 1px solid #eee
+
+.page-footer em
+  color: #ccc
+  margin: 0 0.6em
+
+.page-footer a
+  color: #91cdec
+
+body
+  margin: 0
+  min-width: 100%
+  height: 100%
+  padding-left: 50px
+
+.ie8 body
+  padding-left: 0
+
+.content-frame
+  -ms-transform: translate(150px, 0)
+  -moz-transform: translate(150px, 0)
+  -webkit-transform: translate3d(150px, 0, 0)
+  transform: translate(150px, 0)
+  -ms-transition: -ms-transform 0.28s ease-in-out
+  -moz-transition: -moz-transform 0.28s ease-in-out
+  -webkit-transition: -webkit-transform 0.28s ease-in-out
+  transition: transform 0.28s ease-in-out
+
+.nav-collapsed .content-frame
+  -ms-transform: translate(0px, 0)
+  -moz-transform: translate(0px, 0)
+  -webkit-transform: translate3d(0px, 0, 0)
+  transform: translate(0px, 0)
+
+@media screen and (max-width: 740px)
+  .content-frame
+    -ms-transform: translate(0px, 0)
+    -moz-transform: translate(0px, 0)
+    -webkit-transform: translate3d(0px, 0, 0)
+    transform: translate(0px, 0)
+
+.pin-frame
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
+  height: 0
+
+.pin-content
+  margin: 0 auto
+  width: 870px
+  position: relative
+  left: -25px
+  -ms-transform: translate(150px, 0)
+  -moz-transform: translate(150px, 0)
+  -webkit-transform: translate3d(150px, 0, 0)
+  transform: translate(150px, 0)
+  -ms-transition: -ms-transform 0.28s ease-in-out
+  -moz-transition: -moz-transform 0.28s ease-in-out
+  -webkit-transition: -webkit-transform 0.28s ease-in-out
+  transition: transform 0.28s ease-in-out
+
+.no-touch .nav-collapsed .pin-content
+  -ms-transform: translate(0px, 0)
+  -moz-transform: translate(0px, 0)
+  -webkit-transform: translate3d(0px, 0, 0)
+  transform: translate(0px, 0)
+
+html.side-nav-always-open
+  padding-left: 200px
+
+html.side-nav-always-open body
+  padding-left: 0
+
+html.side-nav-always-open .content-frame
+  -moz-transition: none
+  -webkit-transition: none
+  -o-transition: none
+  transition: none
+  -webkit-transform: none
+  -ms-transform: none
+  -moz-transform: none
+  -o-transform: none
+  transform: none
+
+@media screen and (max-width: 740px)
+  html.side-nav-always-open
+    padding-left: 0
+
+.side-nav
+  position: fixed
+  left: 0
+  top: 0
+  height: 100%
+  width: 200px
+  overflow: hidden
+  cursor: default
+  color: #c8c8c8
+  background: #222
+  overflow-x: hidden
+  overflow-y: auto
+  -moz-transition: width ease-in-out 0.28s, background linear 0.1s
+  -webkit-transition: width ease-in-out 0.28s, background linear 0.1s
+  -o-transition: width ease-in-out 0.28s, background linear 0.1s
+  transition: width ease-in-out 0.28s, background linear 0.1s
+  -ms-transform: translate(0px, 0)
+  -moz-transform: translate(0px, 0)
+  -webkit-transform: translate3d(0px, 0, 0)
+  transform: translate(0px, 0)
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+
+.gv-logo
+  height: 50px
+
+.gv-logo .logotype,
+.gv-logo .bug
+  background-image: url(../images/bug.png)
+  background-image: url(../images/bug.svg)
+  width: 150px
+  height: 50px
+
+.gv-logo .logotype
+  background-position: 0 -50px
+  opacity: 1.0
+  -moz-transition: opacity linear 0.28s
+  -webkit-transition: opacity linear 0.28s
+  -o-transition: opacity linear 0.28s
+  transition: opacity linear 0.28s
+
+.gv-logo .bug
+  position: absolute
+  top: 0
+  left: 0
+
+.gv-logo span
+  display: none
+
+.side-nav .gv-logo
+  margin: 20px 0 30px 0
+
+.side-nav .gv-logo a
+  display: block
+  position: absolute
+  right: 30px
+  -moz-transition: right ease-in-out 0.28s
+  -webkit-transition: right ease-in-out 0.28s
+  -o-transition: right ease-in-out 0.28s
+  transition: right ease-in-out 0.28s
+
+.nav-collapsed .side-nav .gv-logo a
+  right: 6px
+
+.nav-collapsed .side-nav .gv-logo .logotype
+  opacity: 0
+
+.ie8 .gv-logo .logotype,
+.ie8 .gv-logo .bug
+  background-image: url(../images/bug.png)
+
+.ie8 .side-nav .gv-logo a
+  right: auto
+  left: 13px
+
+.side-nav ul
+  width: 200px
+
+.side-nav li a
+  display: block
+  position: relative
+  font-size: 16px
+  font-weight: 300
+  color: inherit
+  color: #aaaaaa
+  line-height: 44px
+  padding-left: 50px
+  border-top: 1px #2d2d2d solid
+
+.side-nav li a.selected
+  color: #e3bc28
+
+.side-nav li:last-child a
+  border-bottom: 1px #2d2d2d solid
+
+.side-nav h3
+  width: 200px
+  margin: 45px 0 14px 15px
+  font-family: 'brandon-grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-size: 14px
+  font-weight: 300
+  opacity: 1
+  -moz-transition: opacity ease-in-out 0.28s
+  -webkit-transition: opacity ease-in-out 0.28s
+  -o-transition: opacity ease-in-out 0.28s
+  transition: opacity ease-in-out 0.28s
+
+.side-nav .icon
+  display: block
+  position: absolute
+  top: 1px
+  left: 5px
+  width: 40px
+  height: 40px
+  overflow: hidden
+  background-image: url(../images/icons/nav-icons.png)
+  background-image: url(../images/icons/nav-icons.svg)
+  opacity: 0.4
+
+.side-nav li a.selected .icon
+  opacity: 1.0
+
+.side-nav .icon.team
+  background-position: -7px 0px !important
+
+.side-nav .selected .icon.team
+  background-position: -57px 0px !important
+
+.side-nav.white-nav .icon.team
+  background-position: -107px 0px !important
+
+.side-nav .icon.portfolio
+  background-position: -7px -40px !important
+
+.side-nav .selected .icon.portfolio
+  background-position: -57px -40px !important
+
+.side-nav.white-nav .icon.portfolio
+  background-position: -107px -40px !important
+
+.side-nav .icon.about
+  background-position: -7px -80px !important
+
+.side-nav .selected .icon.about
+  background-position: -57px -80px !important
+
+.side-nav.white-nav .icon.about
+  background-position: -107px -80px !important
+
+.side-nav .icon.design
+  background-position: -7px -160px !important
+
+.side-nav .selected .icon.design
+  background-position: -57px -160px !important
+
+.side-nav.white-nav .icon.design
+  background-position: -107px -160px !important
+
+.side-nav .icon.recruiting
+  background-position: -7px -200px !important
+
+.side-nav .selected .icon.recruiting
+  background-position: -57px -200px !important
+
+.side-nav.white-nav .icon.recruiting
+  background-position: -107px -200px !important
+
+.side-nav .icon.marketing
+  background-position: -7px -240px !important
+
+.side-nav .selected .icon.marketing
+  background-position: -57px -240px !important
+
+.side-nav.white-nav .icon.marketing
+  background-position: -107px -240px !important
+
+.side-nav .icon.engineering
+  background-position: -7px -280px !important
+
+.side-nav .selected .icon.engineering
+  background-position: -57px -280px !important
+
+.side-nav.white-nav .icon.engineering
+  background-position: -107px -280px !important
+
+.side-nav .icon.google-access
+  background-position: -7px -320px !important
+
+.side-nav .selected .icon.google-access
+  background-position: -57px -320px !important
+
+.side-nav.white-nav .icon.google-access
+  background-position: -107px -320px !important
+
+.side-nav .icon.library
+  background-position: -7px -360px !important
+
+.side-nav .selected .icon.library
+  background-position: -57px -360px !important
+
+.side-nav.white-nav .icon.library
+  background-position: -107px -360px !important
+
+.side-nav .icon.workshops
+  background-position: -7px -400px !important
+
+.side-nav .selected .icon.workshops
+  background-position: -57px -400px !important
+
+.side-nav.white-nav .icon.workshops
+  background-position: -107px -400px !important
+
+.side-nav .icon.product
+  background-position: -7px -440px !important
+
+.side-nav .selected .icon.product
+  background-position: -57px -440px !important
+
+.side-nav.white-nav .icon.product
+  background-position: -107px -440px !important
+
+.no-touch .side-nav li a:hover
+  background: #111
+
+.ie8 .side-nav .icon
+  background: url(../images/icons/nav-icons.png)
+
+.nav-collapsed .side-nav li a
+  background: transparent
+
+@media screen and (max-height: 670px) and (min-width: 740px)
+  .side-nav li a
+    line-height: 35px
+    font-size: 14px
+
+  .side-nav .icon
+    top: -5px
+
+.ie8 .side-nav li a
+  line-height: 35px
+  font-size: 14px
+
+.ie8 .side-nav .icon
+  top: -5px
+
+.nav-collapsed .side-nav
+  width: 50px
+
+.nav-collapsed .side-nav h3
+  opacity: 0
+
+.side-nav.white-nav
+  background: transparent
+
+.side-nav.white-nav li a
+  color: #333
+  border-color: rgba(1, 1, 1, 0.1)
+
+.side-nav.white-nav .gv-logo .logotype
+  top: 5px
+  background-position: 0 -100px
+
+.no-touch .side-nav.white-nav li a:hover
+  background: rgba(1, 1, 1, 0.04)
+
+.ie8 .side-nav.white-nav li a
+  border-color: #ccc
+
+.ie8 .side-nav.white-nav li a:hover
+  background: #eee
+
+.gv-logo.mobile
+  display: none
+  position: absolute
+  left: 10px
+  top: 10px
+
+.gv-logo.mobile .logotype
+  top: 5px
+  background-position: 0 -100px
+
+@media screen and (max-width: 740px)
+  .side-nav
+    display: none
+    -moz-transition: none
+    -webkit-transition: none
+    -o-transition: none
+    transition: none
+
+  .gv-logo.mobile
+    display: block
+
+  body
+    padding-left: 0
+
+  .home .side-nav
+    display: block
+    position: relative
+    width: auto
+
+  .home .side-nav .gv-logo
+    display: none
+
+  .home .side-nav ul
+    width: auto
+
+  .home .side-nav li a
+    line-height: 53px
+
+  .home .side-nav .icon
+    top: 4px
+
+.top-nav
+  display: none
+  position: fixed
+  left: 0
+  top: 0
+  padding-top: 8px
+  width: 100%
+  height: 50px
+  background: #fff
+  border-bottom: 1px solid #eee
+  color: #777
+  font-size: 16px
+  font-weight: 300
+  z-index: 30
+
+.top-nav .left
+  position: absolute
+  left: 5px
+  z-index: 5
+
+.top-nav .btn
+  display: inline-block
+  height: 32px
+  line-height: 32px
+  border: none
+  color: inherit
+  padding: 0 15px 0 35px
+  background-image: url(../images/back-button.png)
+  background-image: url(../images/back-button.svg)
+  background-position: top left
+  background-color: #fff
+  border-right: 1px #e0e0e0 solid
+
+.top-nav .btn-icon
+  display: block
+  position: absolute
+  top: 7px
+  left: 12px
+  width: 20px
+  height: 20px
+  background: url(../images/bug.svg) no-repeat right top
+  background-size: 75px 75px
+
+.top-nav .title
+  margin: 0 100px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  text-align: center
+  line-height: 32px
+
+@media screen and (max-width: 740px)
+  .page .content-frame
+    padding-top: 49px
+
+  .top-nav
+    display: block
+
+  body.home .top-nav
+    display: none
+
+/*********************************
+  Home Page
+*/
+body.home .frame,
+body.home .page,
+body.home .content-frame,
+body.home .home-content
+  padding: 0
+  height: 100%
+
+.home-content
+  width: auto
+  margin-right: 150px
+
+.home-content .home-carousel
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+  padding-bottom: 60px
+
+.home-content .home-carousel,
+.home-content .slides
+  height: 100%
+  position: relative
+  width: auto
+  overflow: hidden
+
+.home-content p.subhead
+  font-size: 30px
+  color: #333
+  line-height: 1.3
+  margin: 1em auto 0.4em auto
+  max-width: 800px
+
+.home-content p.subhead span
+  display: block
+
+.home-content .slide-image
+  position: relative
+
+.home-content .exit
+  position: absolute
+  bottom: 10%
+  left: 50%
+  font-size: 18px
+  color: #ccc
+  font-weight: 100
+
+.home-content .exit#exit-foundation
+  left: auto
+  right: 53%
+
+.side-nav-always-open .home-content
+  margin-right: 0
+
+.home-content .slide
+  text-align: center
+  display: none
+
+.home-content .slide:first-child,
+.home-content .slide.loaded
+  display: table
+
+.home-content .slide .container
+  display: table-cell
+  vertical-align: middle
+
+.home-content .slide img
+  margin: 0
+  width: 100%
+  max-width: 900px
+
+.home-content .slide .description
+  font-weight: 300
+  line-height: 1.6
+  padding: 0 80px
+
+.home-content .slide p.about
+  font-size: 18px
+  margin: 1% auto
+  max-width: 800px
+  color: #666
+  line-height: 1.5
+
+.home-content .slide p.about a.home-learn
+  white-space: nowrap
+
+@media screen and (max-width: 1056px)
+  .home-content .slide img
+    height: auto
+    width: 100%
+
+  .home-content .slide p.subhead span
+    display: inline
+
+  .home-content .slide .exit
+    font-size: 12px
+
+@media screen and (max-height: 760px)
+  .home-content .slide img
+    height: auto
+    width: 60%
+
+@media screen and (max-height: 760px) and (max-width: 1056px)
+  .home-content .slide img
+    height: auto
+    width: 100%
+
+  .home-content .slide p.about
+    font-size: 14px
+    margin: 0.5% auto
+
+@media screen and (max-width: 740px)
+  .home-content .slide .exit
+    display: none
+
+.home-content .nav
+  position: absolute
+  left: 0
+  bottom: 10px
+  width: 100%
+  text-align: center
+  z-index: 40
+
+.home-content .nav a
+  display: inline-block
+  width: 30px
+  height: 30px
+
+.home-content .nav .icon
+  display: block
+  width: 20px
+  height: 20px
+  margin: 5px
+  background: url(../images/graphics/carousel.png) no-repeat -20px 0
+  background-image: url(../images/graphics/carousel.svg)
+
+.home-content .nav .selected .icon
+  background-position: 0 0
+
+.home-content .nav a:nth-child(0) .icon,
+.home-content .nav a:nth-child(4) .icon
+  -webkit-transform: rotate(10deg)
+  -ms-transform: rotate(10deg)
+  -moz-transform: rotate(10deg)
+  -o-transform: rotate(10deg)
+  transform: rotate(10deg)
+
+.home-content .nav a:nth-child(1) .icon,
+.home-content .nav a:nth-child(5) .icon
+  -webkit-transform: rotate(-10deg)
+  -ms-transform: rotate(-10deg)
+  -moz-transform: rotate(-10deg)
+  -o-transform: rotate(-10deg)
+  transform: rotate(-10deg)
+
+.home-content .nav a:nth-child(2) .icon,
+.home-content .nav a:nth-child(6) .icon
+  -webkit-transform: rotate(-30deg)
+  -ms-transform: rotate(-30deg)
+  -moz-transform: rotate(-30deg)
+  -o-transform: rotate(-30deg)
+  transform: rotate(-30deg)
+
+.home-content .nav a:nth-child(3) .icon,
+.home-content .nav a:nth-child(7) .icon
+  -webkit-transform: rotate(50deg)
+  -ms-transform: rotate(50deg)
+  -moz-transform: rotate(50deg)
+  -o-transform: rotate(50deg)
+  transform: rotate(50deg)
+
+.home-content .slide
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+.home-content .slide.animated
+  -webkit-transition: left 0.75s, -webkit-transform 0.75s
+  transition: left 0.75s, -webkit-transform 0.75s, transform 0.75s
+
+.home-content .slide.stage-left
+  left: -100.5%
+
+.home-content .slide.stage-right
+  left: 100.5%
+
+.home-content .slide.active
+  z-index: 20
+  left: 0%
+
+@media screen and (max-width: 740px)
+  body.home .frame,
+body.home .page,
+body.home .home-content
+    height: auto
+
+  body.home .content-frame
+    height: 420px
+
+  .home-content
+    margin-right: 0
+
+  .home-content .slides,
+.home-content .slide .center
+    height: 420px
+
+  .home-content .slide img
+    width: 100%
+    max-width: 400px
+    margin-top: 100px
+
+  .home-content .slide .description
+    width: 100%
+    padding: 10px
+
+  .home-content .slide .description p.subhead
+    font-size: 24px
+    margin: 0 10%
+
+  .home-content .slide .description p.subhead.longsubhead
+    font-size: 20px
+
+  .home-content .slide .description p.about
+    display: none
+
+  .home-content .nav
+    text-align: right
+    bottom: auto
+    top: 44px
+    padding-right: 35px
+    -webkit-transform-origin: right top
+    -webkit-transform: scale(0.7, 0.7)
+    transform-origin: right top
+    transform: scale(0.7, 0.7)
+
+/*********************************
+  Team Page
+*/
+.team-content .people-list-large
+  margin-top: 75px
+
+#bill-maris h4
+  line-height: 1.45em
+
+.team-content .team .overview
+  margin-top: 0.4em
+  line-height: 1.2em
+
+.team-content .directory
+  margin-top: 324px
+
+.directory.directory-team
+  padding-top: 50px
+
+@media screen and (max-width: 740px)
+  hr.graph
+    display: none
+
+  .team-content h2
+    margin-top: 1.2em
+
+/*********************************
+    Bio Page
+  */
+.bio-content .portrait
+  float: left
+  margin-top: -1px
+
+.bio-content .portrait img
+  background: #efefef
+  width: 310px
+  height: 310px
+
+.bio-content .portrait.has-press-photo
+  cursor: pointer
+  cursor: -webkit-zoom-in
+  cursor: -moz-zoom-in
+  cursor: zoom-in
+
+.bio-content .name
+  margin-left: 350px
+  width: 280px
+  height: 310px
+
+.bio-content .name > div
+  position: absolute
+  bottom: 0
+
+.bio-content .name h2
+  margin-bottom: 5px
+
+.bio-content .name h5
+  font-size: 18px
+  font-weight: 300
+  color: #888
+  margin-bottom: -3px
+
+@media screen and (max-width: 890px)
+  .bio-content .portrait img
+    width: 230px
+    height: 230px
+
+  .bio-content .name
+    margin-left: 270px
+    width: 200px
+    height: 230px
+
+  .bio-content .name h2
+    font-size: 32px
+    margin-bottom: 0
+
+@media screen and (max-width: 740px)
+  .bio-content .portrait
+    float: none
+    margin: 0
+    max-width: 465px
+
+  .bio-content .portrait img
+    width: 100%
+    height: auto
+
+  .bio-content .name
+    margin-left: 0
+    margin-top: 30px
+    width: auto
+    height: auto
+    clear: both
+
+  .bio-content .name > div
+    position: relative
+
+.bio-content .main-column
+  position: static
+  margin-left: 80px
+  width: 550px
+
+.bio-content .bio-text
+  margin-top: 40px
+  font-size: 16px
+  line-height: 1.6em
+
+.bio-content .links
+  margin-top: 30px
+
+.bio-content .links a
+  margin: 0 20px 0 0
+
+.bio-content .articles
+  margin: 60px 0
+
+.bio-content .articles a
+  margin: 30px 0
+  line-height: 1.6em
+
+.bio-content .articles a h6
+  color: #218bc3
+  font-size: 16px
+  margin: 0 0 3px 0
+
+.bio-content .articles a h6:hover
+  color: #0b2e40
+
+.bio-content .press
+  margin: 60px 0
+
+.bio-content .press .mentions
+  margin-top: 40px
+
+.bio-content .press p
+  color: #333
+  line-height: 1.6em
+  display: block
+  float: left
+  height: 130px
+  width: 240px
+  margin-right: 30px
+
+.bio-content .press a
+  font-size: 16px
+
+@media screen and (max-width: 890px)
+  .bio-content .main-column
+    margin-left: 0
+    width: 470px
+
+  .bio-content .bio-text
+    font-size: 14px
+
+  .bio-content .press p
+    width: 200px
+
+@media screen and (max-width: 740px)
+  .bio-content .main-column
+    width: auto
+
+  .bio-content .press p
+    float: none
+    width: auto
+    height: auto
+    margin: 0 0 20px 0
+
+.bio-content .companies
+  width: 200px
+  float: right
+  margin-top: 40px
+
+.bio-content .companies a
+  display: inline-block
+  text-align: center
+  border: 1px solid #eee
+  width: 100%
+  padding: 10px
+  font-size: 12px
+
+.bio-content .companies a:hover
+  border-color: #bcdaed
+
+.bio-content .companies img
+  width: 140px
+
+.bio-content .companies ul
+  margin-top: 10px
+
+.bio-content .companies li
+  line-height: 1.4em
+  margin: 0 0 0.9em 0
+
+@media screen and (max-width: 1160px)
+  .bio-content .companies
+    float: none
+    width: auto
+    margin: 60px 0
+    margin-left: 80px
+
+  .bio-content ul
+    margin-top: 10px
+    width: 100%
+    -webkit-column-count: 2
+    -ms-column-count: 2
+    -moz-column-count: 2
+    -o-column-count: 2
+    column-count: 2
+    -webkit-column-gap: 15px
+    -ms-column-gap: 15px
+    -moz-column-gap: 15px
+    -o-column-gap: 15px
+    column-gap: 15px
+
+  .bio-content ul .logos a
+    width: 20%
+
+@media screen and (max-width: 890px)
+  .bio-content .companies
+    margin-left: 0
+
+/*********************************
+    Portfolio Page
+  */
+.portfolio-content .main-column
+  padding-bottom: 100px
+
+.portfolio-group
+  padding-left: 175px
+  min-height: 300px
+  margin-top: 80px
+
+.portfolio-group .key-investors
+  position: absolute
+  left: 0
+  top: 0
+  width: 150px
+  line-height: 1.8em
+
+.portfolio-group .key-investors em
+  display: none
+
+.portfolio-group .key-investors a
+  font-weight: 300
+
+.portfolio-group .key-investors h6
+  margin-bottom: 0
+  margin-top: 30px
+
+.portfolio-group .featured-investments
+  margin-right: -40px
+
+.portfolio-group .featured-investments li
+  position: relative
+  float: left
+  width: 138px
+  height: 138px
+  margin-right: 20px
+  margin-bottom: 20px
+  border: 1px #eee solid
+  text-align: center
+  -moz-transition: border-color ease-in-out 0.3s
+  -webkit-transition: border-color ease-in-out 0.3s
+  -o-transition: border-color ease-in-out 0.3s
+  transition: border-color ease-in-out 0.3s
+
+.portfolio-group .featured-investments li:hover
+  border-color: #bcdaed
+
+.portfolio-group .featured-investments li:hover img
+  opacity: 1
+
+.portfolio-group .featured-investments li .exit
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  margin-bottom: 6px
+  padding: 0 4px
+  font-size: 9px
+  color: #aaa
+  line-height: 1.2
+
+.portfolio-group .featured-investments a
+  width: 100%
+  height: 100%
+  line-height: 136px
+
+.portfolio-group .featured-investments img
+  display: inline-block
+  vertical-align: middle
+  opacity: 0.85
+  border: none
+  width: 120px
+  height: 120px
+
+.portfolio-group .featured-investments li.more-toggle
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+
+.portfolio-group .featured-investments li.more-toggle > div
+  width: 100%
+  height: 100%
+  font-weight: 300
+  cursor: pointer
+
+.portfolio-group .featured-investments li.more-toggle .show-more
+  color: #999
+  font-weight: 100
+  padding-top: 34px
+
+.portfolio-group .featured-investments li.more-toggle .show-less
+  color: #218bc3
+  padding-top: 60px
+  display: none
+
+.portfolio-group .featured-investments li.more-toggle.expanded .show-more
+  display: none
+
+.portfolio-group .featured-investments li.more-toggle.expanded .show-less
+  display: block
+
+.portfolio-group .featured-investments li.more-toggle .count
+  display: block
+  font-size: 24px
+  padding: 6px 0
+  margin-left: -5px
+  color: #218bc3
+  font-weight: 100
+
+.portfolio-group .more-investments
+  display: none
+  margin: 20px -20px 30px 0
+
+.portfolio-group .more-investments li
+  float: left
+  width: 33%
+  line-height: 1.2
+  height: 50px
+  margin: 5px 0 0 0
+  padding: 0 20px 0 0
+  color: #555
+
+.portfolio-group .more-investments .acquired
+  margin-top: 3px
+  font-size: 10px
+  color: #aaa
+
+.portfolio-group .testimonial
+  text-align: center
+
+.portfolio-group .testimonial .author
+  color: #a4a4a4
+
+.portfolio-content .directory
+  margin-top: 310px
+
+.directory.directory-portfolio
+  padding-top: 50px
+
+.portfolio-all
+  margin-top: 80px
+
+.portfolio-all li
+  margin: 0 1% 1% 0
+  display: block
+  float: left
+  width: 24%
+  padding: 0 10px
+  position: relative
+  text-align: center
+  height: 8em
+
+.portfolio-all a,
+.portfolio-all span
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  padding-top: 50px
+  line-height: 1
+  z-index: 500
+  font-size: 15px
+  border: 1px solid #eee
+  -moz-transition: border-color ease-in-out 0.3s
+  -webkit-transition: border-color ease-in-out 0.3s
+  -o-transition: border-color ease-in-out 0.3s
+  transition: border-color ease-in-out 0.3s
+
+.portfolio-all a:hover,
+.portfolio-all span:hover
+  border-color: #bcdaed
+
+.portfolio-all div.acquired
+  position: absolute
+  bottom: 5px
+  left: 0
+  text-align: center
+  width: 100%
+  font-size: 10px
+  color: #ccc
+  padding: 0 10px
+  line-height: 1
+
+.portfolio-all li:hover div.acquired
+  color: #333
+
+@media screen and (max-width: 890px)
+  .portfolio-group .more-investments li
+    float: left
+    width: 50%
+
+@media screen and (max-width: 740px)
+  .portfolio-group
+    padding-left: 0
+    position: relative
+    min-height: 1px
+    margin: 40px 0 0 0
+    padding-bottom: 4em
+
+  .portfolio-group .show-more,
+.portfolio-group .show-less
+    -webkit-transform: scale(0.8)
+    position: relative
+    top: -20px
+
+  .portfolio-group .key-investors
+    position: static
+    width: auto
+    padding-bottom: 20px
+    line-height: 1.3
+    color: #555
+
+  .portfolio-group .key-investors h3
+    border-top: 1px solid #eee
+    padding: 10px 0 0 0
+    margin-bottom: 0
+
+  .portfolio-group .key-investors em
+    display: inline
+    font-style: normal
+
+  .portfolio-group .key-investors li,
+.portfolio-group .key-investors h6,
+.portfolio-group .key-investors ul
+    display: inline
+    font-size: 13px
+
+  .portfolio-group .key-investors li
+    white-space: nowrap
+
+  .portfolio-group .key-investors div
+    position: absolute
+    bottom: 10px
+
+  .portfolio-group .featured-investments li
+    width: 85px
+    height: 85px
+    margin-right: 2%
+    margin-bottom: 2%
+
+  .portfolio-group .featured-investments li a
+    padding-top: 2px
+    padding-left: 2px
+
+  .portfolio-group .featured-investments li img
+    width: 95%
+    height: auto
+    position: relative
+    vertical-align: top
+
+  .portfolio-group .featured-investments li .acquired
+    display: none
+
+  .portfolio-group .testimonial
+    display: none
+
+  .portfolio-all li
+    width: 49%
+
+#all .more-investments
+  display: block
+  margin-top: 4px
+
+#all .more-toggle
+  display: none
+
+/*********************************
+    About Page
+  */
+.about-content .sidebar
+  padding-top: 365px
+
+.about-content .categories
+  margin: 50px 0 70px 0
+
+.about-content .categories a
+  display: block
+  float: left
+  width: 33%
+  margin-top: 22px
+  text-align: center
+  color: #999
+  background: url(../images/pages/about-enterprise.jpg) 50% -105px no-repeat
+  background-size: 90% auto
+  -webkit-transition: none
+  -moz-transition: none
+  transition: none
+
+.about-content .categories a em
+  display: block
+  background: url(../images/pages/about-enterprise.jpg) 50% 0 no-repeat
+  opacity: 0
+  padding-top: 80px
+  background-size: 90% auto
+  font-style: normal
+  -webkit-transition: opacity 0.3s ease-in-out
+  -moz-transition: opacity 0.3s ease-in-out
+  transition: opacity 0.3s ease-in-out
+
+.about-content .categories a:hover em
+  opacity: 1
+  color: #218bc3
+
+.about-content .categories a.about-mobile,
+.about-content .categories a.about-mobile em
+  background-image: url(../images/pages/about-mobile.jpg)
+
+.about-content .categories a.about-consumer,
+.about-content .categories a.about-consumer em
+  background-image: url(../images/pages/about-consumer.jpg)
+
+.about-content .categories a.about-health,
+.about-content .categories a.about-health em
+  background-image: url(../images/pages/about-health.jpg)
+
+.about-content .categories a.about-data,
+.about-content .categories a.about-data em
+  background-image: url(../images/pages/about-cloud.jpg)
+
+.about-content .categories a.about-science,
+.about-content .categories a.about-science em
+  background-image: url(../images/pages/about-science.jpg)
+
+.about-content .categories .all-stages span
+  position: absolute
+  bottom: 10px
+  left: 5%
+  color: #999
+
+.about-content .categories .all-stages span.about-venture
+  left: 27%
+
+.about-content .categories .all-stages span.about-growth
+  left: 62%
+
+.about-content .categories > div
+  float: left
+  width: 300px
+  padding-top: 20px
+
+.about-content .categories .all-stages
+  margin-right: 20px
+
+.about-content .categories img
+  width: 100%
+  max-width: 500px
+
+@media screen and (max-width: 890px)
+  .about-content .categories > div
+    float: none
+    width: 80%
+    margin-left: 20px
+
+  .about-content .categories .all-stages
+    margin: 0 0 40px 20px
+
+.about-content .section
+  margin-top: 30px
+
+.about-content .section h3
+  margin-top: 30px
+
+.about-content .section .portrait
+  display: block
+  float: right
+  margin: 0 0 20px 40px
+
+.about-content .unparalleled-support .portrait,
+.about-content .google-access .portrait
+  float: left
+  margin: 0 40px 20px 0
+
+@media screen and (max-width: 890px)
+  .about-content .categories div,
+.about-content .categories .all-stages
+    margin-left: 0
+    width: 100%
+
+  .about-content .categories .all-stages span
+    left: 7%
+
+  .about-content .categories .all-stages span.about-venture
+    left: 30%
+
+  .about-content .categories .all-stages span.about-growth
+    left: 64%
+
+  .about-content .categories a
+    width: 100px
+
+  .about-content .section h3
+    font-size: 20px
+    font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-weight: 300
+    text-transform: none
+    -webkit-text-fill-color: #333 !important
+
+  .about-content .section .portrait
+    float: right !important
+    margin: 20px 0 20px 20px
+
+  .about-content .section img
+    width: 120px
+    height: 120px
+
+/*********************************
+      GV Studio Pages (How we help)
+    */
+.studio-content h2
+  margin-bottom: 45px
+
+.studio-content .sidebarbar
+  padding-top: 190px
+
+ul.checkmarks
+  margin-top: 2em
+
+p.check,
+ul.checkmarks li
+  position: relative
+  padding-left: 24px
+  margin: 0 0 1em 0
+
+p.check:before,
+ul.checkmarks li:before
+  content: " "
+  position: absolute
+  top: 0
+  left: -4px
+  display: inline-block
+  width: 24px
+  height: 20px
+  background: url(../images/icons/icon-sprite.png) no-repeat 4px -160px
+  background-image: url(../images/icons/icon-sprite.svg)
+
+em.checkmark
+  display: inline-block
+  vertical-align: middle
+  width: 20px
+  height: 18px
+  margin-right: 4px
+  background: url(../images/icons/icon-sprite.png) no-repeat 4px -163px
+  background-image: url(../images/icons/icon-sprite.svg)
+
+.studio-content .stories
+  position: relative
+  margin-bottom: 100px
+
+.studio-content .stories .story
+  width: 270px
+  text-align: center
+
+.studio-content .stories .story.hero
+  background: url(../images/pages/hero-back.jpg) 0 100% no-repeat
+  background-size: 100%
+  width: 100%
+  padding: 40px 340px 80px 0
+  position: relative
+
+.studio-content .stories .story.hero .story-image
+  position: absolute
+  right: 0
+  bottom: 40px
+
+.studio-content .stories .story.hero .story-image img
+  width: 300px
+
+.studio-content .stories .story.hero .story-image-full
+  bottom: 0
+
+.studio-content .stories .story.hero .description
+  padding-left: 25px
+  display: table-cell
+  vertical-align: middle
+  height: 250px
+  position: relative
+  top: 20px
+
+.studio-content .stories .story.hero.opposite
+  padding-left: 320px
+  padding-right: 40px
+  margin-top: -40px
+
+.studio-content .stories .story.hero.opposite .story-image
+  right: auto
+  left: 0
+
+.studio-content .stories .story.sub
+  float: left
+  margin: 30px 30px 0 10px
+
+.studio-content .stories .story.sub:last-child
+  margin-right: 10px
+
+.studio-content .stories .story.sub .story-image
+  margin-bottom: 15px
+
+@media screen and (max-width: 890px)
+  .studio-content .stories .story
+    width: auto
+
+  .studio-content .stories .story.sub
+    float: none
+
+  .studio-content .stories .story.sub,
+.studio-content .stories .story.sub:last-child
+    margin: 0 auto 60px auto
+
+  .studio-content .stories .story.sub .description
+    width: auto
+
+  .studio-content .stories .story.sub .story-image
+    position: relative
+
+  .studio-content .stories .story .description
+    padding: 30px 10px 10px 10px
+
+  .studio-content .stories .story.hero,
+.studio-content .stories .story.hero.opposite
+    padding: 0 0 40px 0
+    margin-top: 0
+    height: auto
+    min-height: 1px
+    background: none
+
+  .studio-content .stories .story.hero .story-image,
+.studio-content .stories .story.hero.opposite .story-image
+    margin: 0 auto -60px auto
+    float: none
+    width: 100%
+    max-width: 330px
+    position: relative
+    bottom: 0
+
+  .studio-content .stories .story.hero .story-image img,
+.studio-content .stories .story.hero.opposite .story-image img
+    width: 100%
+
+  .studio-content .stories .story.hero .description,
+.studio-content .stories .story.hero.opposite .description
+    width: auto
+
+  .studio-content .stories .story.sub .story-image img
+    max-width: 330px
+    float: none
+    width: 100%
+    margin-left: 0
+    margin-bottom: 0
+    height: auto
+
+  .studio-content .stories .studio-content .stories
+    margin-bottom: 0 !important
+
+.studio-content .company-checklist
+  margin-top: 50px
+
+.studio-content .company-checklist .companies
+  margin-top: 50px
+
+.studio-content .company-checklist .companies li
+  float: left
+  width: 33%
+  padding-right: 20px
+  min-height: 200px
+
+.studio-content .company-checklist .companies li a
+  font-size: 16px
+  font-weight: 300
+
+.studio-content .company-checklist .companies li ul
+  padding-top: 6px
+
+.studio-content .company-checklist .companies li li
+  line-height: 1.6em
+  padding: 3px 0 0 22px
+  width: auto
+  min-height: 1px
+  float: none
+  position: relative
+
+.studio-content .company-checklist .companies li li:before
+  content: " "
+  position: absolute
+  top: 2px
+  left: -4px
+  display: inline-block
+  width: 24px
+  height: 20px
+  background: url(../images/icons/icon-sprite.png) no-repeat 4px -160px
+  background-image: url(../images/icons/icon-sprite.svg)
+
+@media screen and (max-width: 890px)
+  .studio-content .company-checklist .companies li
+    width: 50%
+
+@media screen and (max-width: 740px)
+  .studio-content .company-checklist .companies li
+    width: 100%
+    min-height: 1px
+    padding-bottom: 20px
+
+.studio-content .people-list-large a
+  height: 200px
+
+.studio-content .press
+  margin-top: 80px
+  margin-right: -47px
+
+.studio-content .press h2
+  margin-right: 47px
+
+.studio-content .press h6
+  font-size: 18px
+  font-weight: 300
+
+.studio-content .press .article
+  width: 290px
+  float: left
+  margin: 10px 47px 30px 0
+
+.studio-content .press img.preview
+  display: block
+
+.studio-content .press .mask
+  position: absolute
+  bottom: 0
+  height: 200px
+  width: 290px
+  background-repeat: no-repeat
+  background-position: left bottom
+  background-size: 100% 100%
+  background-image: url(../images/masks/press-mask-1.png)
+
+.studio-content .press .article:nth-child(odd) .mask
+  background-image: url(../images/masks/press-mask-2.png)
+
+.studio-content .press img.logo
+  display: block
+  margin: 0 0 10px 0
+
+@media screen and (max-width: 890px)
+  .studio-content h2
+    margin-bottom: 20px
+
+  .studio-content .stories
+    margin-bottom: 20px
+
+  .studio-content .people-list-large a
+    height: auto
+
+  .studio-content .press
+    margin-top: 40px
+
+  .studio-content .press .article
+    width: auto
+    float: none
+    margin-top: 40px
+    margin-bottom: 60px
+
+@media screen and (max-width: 740px)
+  .studio-content h1
+    margin-bottom: 20px
+
+/*********************************
+      Desgin Page
+    */
+.design-content .sidebar
+  padding-top: 340px
+
+/*********************************
+      Google Access Page
+    */
+.google-access-content .columns
+  margin-top: 70px
+  margin-right: -30px
+  padding-bottom: 50px
+
+.google-access-content .columns div
+  width: 50%
+  min-height: 11em
+  padding-right: 30px
+
+.google-access-content section
+  margin-bottom: 30px
+  line-height: 1.6em
+
+.google-access-content section img
+  width: 100%
+  height: auto
+
+.google-access-content .google-other h2
+  margin-bottom: 40px
+
+.google-access-content h4
+  text-transform: none
+  font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-weight: 300
+  margin-top: 2em
+  margin-bottom: 0.4em
+
+.google-access-content .more
+  margin-top: 1em
+  white-space: nowrap
+
+@media screen and (max-width: 740px)
+  .google-access-content .columns
+    margin-top: 3em
+
+  .google-access-content .columns div
+    width: auto
+    float: none
+    padding-bottom: 1em
+    min-height: 1px
+
+/*********************************
+      Recruiting Page
+    */
+.recruiting-content .story.kabam img
+  margin-left: -12%
+
+.recruiting-content .sidebar
+  padding-top: 245px
+
+/*********************************
+      Product Page
+    */
+.product-content .sidebar
+  padding-top: 330px
+
+.product-skills
+  margin-bottom: 100px
+
+.product-skills h2
+  margin-bottom: 0.5em
+
+/*********************************
+      PR and Marketing Page
+    */
+.marketing-pr-content .sidebar
+  padding-top: 420px
+
+.marketing-pr-feature
+  float: right
+  width: 340px
+  margin: 0 -70px 60px 40px
+
+.marketing-pr-sections
+  padding: 40px 0
+
+.marketing-pr-sections h3
+  margin-top: 30px
+  margin-bottom: 0.2em
+
+.attribution
+  color: #999
+  text-transform: uppercase
+  font-family: 'brandon-grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-weight: 300
+  margin-bottom: 2em
+
+em.attribution
+  display: block
+  font-style: normal
+  margin-top: 0.6em
+
+.gv-helped
+  color: #999
+  margin-top: 1em
+
+.gv-helped-list
+  margin: 0 0 2em 0
+
+.gv-helped-list li
+  margin-bottom: 0.2em
+
+@media screen and (max-width: 890px)
+  .marketing-pr-feature
+    width: 220px
+    margin-right: -30px
+
+@media screen and (max-width: 740px)
+  .marketing-pr-feature
+    width: 160px
+    margin: 20px -20px 10px 10px
+
+/*********************************
+      Engineering Page
+    */
+.eng-quote
+  margin: 1em 0 0 0
+
+/*********************************
+      Events
+    */
+.event-content .sidebar
+  padding-top: 255px
+
+.events-content .lead-in
+  margin-bottom: 40px
+
+.events-content section
+  position: relative
+  min-height: 30px
+  margin-bottom: 40px
+
+.events-content a:visited
+  color: #7249a9
+
+.events-content .links a
+  display: block
+  float: left
+  position: relative
+  width: 50%
+  padding-left: 75px
+  padding-right: 40px
+
+.events-content .links h4
+  font-size: 18px
+  line-height: 22px
+  margin-bottom: 6px
+  text-transform: none
+  font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-weight: 300
+
+.events-content .links p
+  color: #222
+
+.events-content .links img
+  display: block
+  position: absolute
+  left: 5px
+  top: 10px
+
+.events-content .links em
+  color: #999
+  font-style: normal
+
+@media screen and (max-width: 620px)
+  .events-content .links a
+    width: auto
+    float: none
+    margin-bottom: 30px
+
+  .events-content .links h4
+    margin-bottom: 2px
+
+  .events-content .links img
+    left: -5px
+
+  .events-content .links em
+    display: block
+
+.events-content .subscribe
+  background: #efefef
+  line-height: 1.6em
+  padding: 40px
+  display: none
+
+.events-content .subscribe .eg
+  font-size: 12px
+  color: #777
+
+.events-content .upcoming-events,
+.events-content .past-events
+  padding-top: 30px
+  padding-left: 255px
+
+.events-content .none
+  color: #999
+
+.events-content h3
+  position: absolute
+  left: 0
+  top: 25px
+
+.events-list li
+  position: relative
+  margin-bottom: 20px
+
+.events-list .date
+  display: block
+  position: absolute
+  left: -255px
+  top: 0
+  width: 230px
+  text-align: right
+  font-weight: normal
+  text-transform: uppercase
+
+@media screen and (max-width: 620px)
+  .events-content .upcoming-events,
+.events-content .past-events
+    padding-left: 100px
+
+  .events-content h3
+    position: relative
+    margin-left: -100px
+
+  .events-content .date
+    width: 80px
+    left: -100px
+    text-align: left
+
+.events-list span
+  color: #999
+
+.events-list h6
+  color: #000
+  font-size: 18px
+  font-weight: 300
+
+.events-list .note
+  display: block
+  font-size: 11px
+  text-transform: uppercase
+  font-weight: 400
+
+.events-list .note .icon
+  position: relative
+  top: 8px
+  margin-right: 4px
+
+.events-list .note.portco-only
+  color: #777
+
+.events-list .note.portco-only:hover
+  color: #218bc3
+
+article .event-date
+  margin-top: -15px
+
+article .portfolio-only-message
+  color: #999
+
+@media screen and (max-width: 740px)
+  .events-content .links a
+    padding: 0 0 10px 0
+    margin: 0
+
+  .events-content .links a img
+    display: none
+
+  .events-content .upcoming-events,
+.events-content .past-events
+    padding: 0
+    margin: 0
+    left: 0
+
+  .events-content .upcoming-events h3,
+.events-content .past-events h3
+    margin: 0 0 0.5em 0
+    top: 0
+
+  .events-content .events-list,
+.events-content p.none
+    margin-bottom: 40px
+
+  .events-content .events-list .date,
+.events-content p.none .date
+    left: 0
+    position: relative
+    font-size: 12px
+    color: #bbb
+    border-top: 1px solid #eee
+    width: 100%
+    display: block
+    padding-top: 15px
+
+  .events-content .events-list h6,
+.events-content p.none h6
+    font-size: 14px
+    font-weight: 500
+
+/*********************************
+  Case Studies
+*/
+.case-study
+  margin-top: 36px
+  line-height: 1.8
+
+.case-study .lead-in
+  font-size: 24px
+  margin: 0
+
+.case-study p
+  font-size: 16px
+  margin: 0.5em 0 0 0
+
+.case-study h2
+  margin: 2em 0 0.5em 0
+
+.case-study h3
+  margin: 1.5em 0 0.5em 0
+
+.case-study img
+  width: 100%
+  margin-top: 2em
+
+.case-study p.caption
+  color: #999
+  text-align: center
+  margin: 0.5em 1em 2em 1em
+  line-height: 1.4
+
+.case-study .container.halfs
+  margin-top: 2em
+
+.case-study .container.halfs img
+  margin-top: 0
+
+.case-study .container.halfs p:first-child
+  margin-top: -0.4em
+
+.case-study .container.halfs div
+  width: 50%
+  float: left
+  padding: 0 10px 0 0
+
+.case-study .container.halfs div:last-child
+  padding: 0 0 0 10px
+
+.case-study .container.thirds
+  margin-top: 2em
+
+.case-study .container.thirds img
+  margin-top: 0
+
+.case-study .container.thirds p:first-child
+  margin-top: -0.4em
+
+.case-study .container.thirds div
+  width: 33%
+  float: left
+  padding: 0 10px
+
+.case-study .container.thirds div:first-child
+  padding: 0 10px 0 0
+
+.case-study .container.thirds div:last-child
+  padding: 0 0 0 10px
+
+/*********************************
+  Press Page
+*/
+.press-content .section
+  margin-top: 60px
+
+.press-content .section a
+  display: block
+  height: 240px
+  float: left
+  width: 45%
+  margin: 20px 20px 0 0
+  text-transform: uppercase
+  font-family: 'brandon-grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  padding-top: 200px
+  border: 1px solid #eee
+  background: url(../images/pages/google-ventures-color-on-white.png) no-repeat 50% 0
+  background-size: cover
+  position: relative
+
+.press-content .section a:hover
+  border-color: #a6d7f0
+
+.press-content .section a div
+  position: absolute
+  top: 250px
+
+.press-content .section a div span
+  margin-right: 0.5em
+
+.press-content .section a div em
+  white-space: nowrap
+  font-style: normal
+  font-weight: 300
+  color: #999
+
+.press-content .section a.black
+  color: #666
+  background-color: #333
+  border-color: #333
+
+.press-content .section a.black:hover
+  border-color: #000
+  background-color: #000
+
+.press-content .press-logos a
+  background-position: 50% 60px
+  background-size: 80% auto
+
+.press-content .press-headshots a
+  margin-bottom: 70px
+
+@media screen and (max-width: 890px)
+  .press-content .section a
+    width: 100%
+    margin-right: 0
+    padding-top: 300px
+    height: 340px
+
+/*********************************
+  404 page / not found
+*/
+.not-found-content gvgraph
+  display: block
+  margin: 100px 0 0 -50px
+
+/*********************************
+  Library & Blog/News
+*/
+/*********************************
+  LIBRARY HOME
+*/
+.library .sidebar
+  padding-top: 332px
+
+/*********************************
+  HOME: ARTICLE HIGHLIGHTS (SCROLLING MODULES)
+*/
+.library .article-highlights
+  margin: 30px 0
+
+.library .article-highlights h3 a
+  color: #218bc3
+
+.library .article-highlights h3 a:hover
+  color: #0b2e40
+
+.library .article-highlights .scroll-viewport
+  height: 275px
+  overflow: hidden
+  -webkit-overflow-scrolling: touch
+  padding-top: 20px
+
+.library .article-highlights .scroll-viewport::-webkit-scrollbar
+  display: none
+
+.library .article-highlights .scroll-canvas
+  height: 235px
+  white-space: nowrap
+
+.library .article-highlights .article-block
+  display: inline-block
+  vertical-align: top
+  padding: 0
+  height: 235px
+  width: 180px
+  white-space: normal
+  overflow: hidden
+  margin: 0 20px 0 0
+
+.library .article-highlights .article-block:last-child
+  margin: 0
+
+.library .article-highlights .article-block .crop
+  width: 180px
+  height: 150px
+  overflow: hidden
+
+.library .article-highlights .article-block img
+  display: block
+  margin: 0
+  height: 100%
+  position: relative
+
+.library .article-highlights .article-block .crop.youtube img
+  margin-top: -15%
+  margin-left: -15%
+  height: 130%
+
+.library .article-highlights .article-block .mask
+  position: absolute
+  bottom: 0
+  width: 180px
+  height: 40px
+  pointer-events: none
+  background: url(../images/masks/library-highlights-edge.png)
+  background: url(../images/masks/library-highlights-edge.svg)
+  background-position: -10px 0
+
+.library .article-highlights .article-block .title
+  padding: 5px 10px 0 10px
+  width: 180px
+  text-align: center
+  line-height: 1.3
+  overflow: hidden
+  line-height: 1.2
+
+.library .article-highlights:nth-child(even) .article-block:nth-child(4n+0) .mask
+  background-position: -10px 0
+
+.library .article-highlights:nth-child(even) .article-block:nth-child(4n+1) .mask
+  background-position: -210px 0
+
+.library .article-highlights:nth-child(even) .article-block:nth-child(4n+2) .mask
+  background-position: -410px 0
+
+.library .article-highlights:nth-child(even) .article-block:nth-child(4n+3) .mask
+  background-position: -610px 0
+
+.library .article-highlights:nth-child(odd) .article-block:nth-child(4n+0) .mask
+  background-position: -410px 0
+
+.library .article-highlights:nth-child(odd) .article-block:nth-child(4n+1) .mask
+  background-position: -610px 0
+
+.library .article-highlights:nth-child(odd) .article-block:nth-child(4n+2) .mask
+  background-position: -10px 0
+
+.library .article-highlights:nth-child(odd) .article-block:nth-child(4n+3) .mask
+  background-position: -210px 0
+
+.library .article-highlights .scroll-button
+  position: absolute
+  height: 275px
+  width: 45px
+  bottom: 0
+  cursor: pointer
+  line-height: 250px
+  text-align: center
+  font-size: 48px
+  font-weight: 300
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+
+.library .article-highlights .scroll-button.right
+  right: -45px
+  border-left: 1px solid #ccc
+
+.library .article-highlights .scroll-button.left
+  left: -45px
+  border-right: 1px solid #ccc
+
+.library .article-highlights .scroll-button.hidden
+  opacity: 0
+  border-color: #000
+  cursor: default
+
+.ie8 .library .article-highlights .scroll-viewport
+  overflow-x: scroll
+
+.ie8 .library .article-highlights .scroll-button
+  display: none
+
+.touch .library .article-highlights .scroll-viewport
+  overflow-y: hidden
+  overflow-x: scroll
+  border-left: 1px solid #eee
+  border-right: 1px solid #eee
+
+.touch .library .article-highlights .scroll-button
+  display: none
+
+@media screen and (max-width: 740px)
+  .content-frame .sidebar
+    padding-top: 0
+
+/*********************************
+  Library category
+*/
+.article-list
+  margin-top: 60px
+
+.article-list li
+  width: 33%
+  float: left
+  padding: 0 30px 30px 0
+
+.article-list li a
+  display: block
+  position: relative
+  height: 200px
+  border: 1px solid #eee
+
+.article-list li a:hover
+  border-color: #a6d7f0
+
+.article-list li a h4
+  padding: 0 15px
+  margin: 0 0 10px 0
+  font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-weight: 300
+  text-transform: none
+
+.article-list li a .crop
+  height: 80px
+  background: #eee
+  margin-bottom: 15px
+  overflow: hidden
+
+.article-list li a img
+  width: 100%
+
+.article-list li a .crop.youtube img
+  margin-top: -18px
+
+.article-list li a p
+  font-size: 11px
+  color: #ccc
+  text-transform: uppercase
+  position: absolute
+  bottom: 0
+  right: 15px
+
+.article-list.article-list-founder-interviews li a
+  height: 187px
+
+.article-list.article-list-founder-interviews li a .crop
+  height: 140px
+
+.article-list.article-list-founder-interviews li a .crop.youtube img
+  width: auto
+  height: 140%
+  margin-top: -15%
+
+.library-follow
+  position: absolute
+  top: 0
+  right: 0
+
+.single .library-follow
+  display: none
+
+.category .library-follow
+  right: 40px
+  top: 50px
+
+@media screen and (max-width: 1160px)
+  .article-list li a img
+    height: 100%
+    width: auto
+
+  .article-list li a .crop.youtube img
+    width: 100%
+    height: auto
+
+  .article-list.article-list-founder-interviews li a
+    height: 210px
+
+  .article-list.article-list-founder-interviews li a p
+    left: 15px
+
+@media screen and (max-width: 890px)
+  .article-list li
+    width: 47%
+
+@media screen and (max-width: 740px)
+  .article-list
+    margin-top: 40px
+
+  .article-list li
+    width: auto
+    padding-bottom: 0
+
+  .article-list li a
+    height: auto
+    display: block
+    padding-left: 80px
+    position: relative
+    min-height: 80px
+    border: none
+
+  .article-list li a .crop
+    position: absolute
+    left: 0
+    top: 0
+    width: 66px
+    height: 66px
+    overflow: hidden
+
+  .article-list li a h4
+    margin: 0 0 4px 0
+    padding: 0
+
+  .article-list li a p
+    position: relative
+    bottom: 0
+    right: 0
+
+  .category-founder-interviews .article-list li
+    width: 100%
+    text-align: center
+    padding-bottom: 1em
+
+  .category-founder-interviews .article-list li a
+    width: 100%
+    padding: 0
+    min-height: 1px
+    text-align: center
+
+  .category-founder-interviews .article-list li a p
+    left: 0
+
+  .category-founder-interviews .article-list li a .crop
+    position: relative
+    width: 220px
+    background: green
+    margin: 0 auto 1em auto
+
+/*********************************
+  Library article
+*/
+article
+  min-height: 460px
+  margin-bottom: 100px
+  font-size: 16px
+  line-height: 24px
+  font-weight: 400
+
+article h1,
+article h2,
+article h3,
+article h4
+  text-transform: none
+  line-height: 1.2
+  font-size: 32px
+  font-family: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-weight: 300
+
+article h2
+  font-size: 30px
+  font-weight: 300
+  margin-top: 48px
+
+article h3
+  font-size: 24px
+  font-weight: 300
+  margin-top: 1.5em
+
+article h4
+  font-size: 16px
+
+article p
+  margin-bottom: 15px
+
+article ol,
+article ul
+  padding: 0
+
+article li
+  list-style-type: square
+
+article hr
+  margin-top: 24px
+  border-color: #ebebeb
+
+article .article-image
+  max-height: 250px
+  overflow: hidden
+
+.library h6 a
+  white-space: nowrap
+
+.library h6 .quo
+  padding: 0 0.5em
+
+article .photo-credit
+  font-size: 12px
+  color: #999
+  text-align: right
+
+article .photo-credit a
+  color: inherit
+
+article .photo-credit a:hover
+  color: #218bc3
+
+.library article h1
+  font-size: 52px
+  line-height: 1.1
+  text-transform: uppercase
+  font-family: 'brandon-grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-weight: 300
+  margin-top: 0
+  left: -1px
+
+.library article header h1 a
+  display: block
+  color: #222
+
+.library article header h1:hover a,
+.library article header h1 a:hover
+  color: #218bc3
+
+.library article .categories
+  font-size: 18px
+  color: #218bc3
+  text-transform: uppercase
+  margin-bottom: 0
+  line-height: 32px
+  padding-left: 1px
+
+article.type-gv_article p.date
+  display: none
+
+.library article .byline
+  margin-bottom: 25px
+
+.library article .byline .title
+  color: #999
+
+.library article .byline .portrait
+  float: left
+  margin-right: 10px
+
+.library article .byline.with-photo .title
+  display: block
+  font-size: 13px
+  text-transform: uppercase
+
+.library article .byline .title:before
+  content: "— "
+
+.library article .byline.with-photo .title:before
+  display: none
+
+.library article .byline a
+  color: inherit
+
+.no-touch .library article .byline a:hover
+  color: #218bc3
+
+.background-clip .library article h1
+  background: transparent
+  -webkit-text-fill-color: inherit
+  -webkit-background-clip: inherit
+
+article .article-content
+  position: relative
+
+.library article .article-content
+  padding-right: 280px
+
+.library article .article-content img.full
+  width: 100%
+
+.library article aside
+  position: absolute
+  top: 0
+  right: 0
+  width: 240px
+  padding: 0 0 0 20px
+  border-left: 1px #dadada solid
+  font-size: 14px
+  line-height: 22px
+
+.library article aside > div
+  margin-top: 30px
+  margin-bottom: 10px
+
+.library article aside > div:first-child
+  margin-top: 10px
+
+.library article aside p
+  margin: 0
+
+.library article table
+  border-collapse: collapse
+  border-spacing: 0
+  width: 100%
+
+.library article th,
+td
+  border: 1px solid #ddd
+  padding: 5px 10px
+  font-weight: inherit
+
+@media screen and (max-width: 1160px)
+  .library article .article-content
+    padding-right: 0
+
+  .library article aside
+    display: none
+
+@media screen and (max-width: 740px)
+  article .article-content
+    padding-right: 0
+
+  .library article aside
+    position: relative
+    width: auto
+
+  h6
+    margin-top: 25px
+
+.article-video-login-message
+  display: none
+  background: #efefef
+  position: relative
+  font-size: 12px
+  line-height: 3
+  color: #666
+  width: 100%
+  text-align: center
+  padding: 0.3em
+  margin-top: -30px
+  margin-bottom: 30px
+
+.article-video
+  width: auto
+  background: #333
+  margin-bottom: 30px
+  padding-bottom: 56.25%
+
+.article-video iframe,
+.article-video .placeholder
+  position: absolute
+  top: 0
+  left: 0
+  display: block
+  height: 100%
+  width: 100%
+  border: 0
+
+.article-video .placeholder
+  cursor: pointer
+
+.article-image
+  margin-bottom: 20px
+
+.article-image img
+  display: block
+  width: 100%
+
+.article-image .caption
+  display: block
+  position: absolute
+  bottom: 0
+  right: 0
+  text-align: right
+  font-size: 11px
+  padding: 1px 8px
+  color: rgba(255, 255, 255, 0.6)
+  background: rgba(0, 0, 0, 0.3)
+
+.article-image a.caption:hover
+  color: #ffffff
+  background: rgba(0, 0, 0, 0.7)
+
+article footer
+  padding-top: 15px
+
+article footer .social
+  float: left
+  margin-right: 25px
+
+article .social-button
+  position: relative
+  display: block
+  font-size: 12px
+  line-height: 26px
+  height: 28px
+  padding-left: 30px
+  padding-right: 12px
+  color: #222
+  border: 1px #ebebeb solid
+  -webkit-border-radius: 2px
+  -moz-border-radius: 2px
+  -ms-border-radius: 2px
+  -o-border-radius: 2px
+  border-radius: 2px
+
+.no-touch article .social-button:hover
+  border-color: #ccc
+
+article .social-button:before
+  content: " "
+  display: block
+  position: absolute
+  width: 20px
+  height: 20px
+  left: 5px
+  top: 3px
+  background: url(../images/icons/icon-sprite.png) no-repeat -20px 0
+  background-image: url(../images/icons/icon-sprite.svg)
+
+article .social-button.facebook:before
+  background-position: -20px -120px
+
+article .social-button.twitter:before
+  background-position: -20px -20px
+
+article .social-button.google-plus:before
+  background-position: -20px -60px
+
+article .social-button.pocket:before
+  background-position: -20px -100px
+
+article footer .social-button
+  float: left
+  margin-right: 5px
+
+article footer .permalink
+  float: left
+
+article footer .permalink a
+  font-size: 12px
+  color: #222
+
+/*********************************
+  Library article / Content specific
+*/
+article div.gv_article_researchsprint_checklist
+  margin-left: 2.3em
+  margin-bottom: 3em
+
+article ul.gv_article_researchsprint_checklist li
+  list-style: none
+  padding-left: 1.5em
+  background: no-repeat url(../images/icons/checkbox.png) left 0.3em
+  background-size: 1em
+
+article ul.gv_article_researchsprint_checklist li.gv_article_researchsprint_checklist_complete
+  background-image: url(../images/icons/checkbox-checked.png)
+
+article ul.gv_article_researchsprint_checklist li em
+  font-style: normal
+  background-color: #f7ebbe
+
+article .gv_article_researchsprint_example
+  margin-bottom: 1em
+  padding: 1em 1em 0em 1em
+  background: #eee
+  border: 1px dotted #ccc
+  color: #444
+
+article .gv_article_researchsprint_example h4
+  font-size: 1em
+  font-weight: 600
+
+article .gv_article_researchsprint_worksheet
+  padding-left: 1.5em
+  background: no-repeat url(../images/icons/document.png) left 0.2em
+  background-size: 1em
+
+/*********************************
+  Blog / News
+*/
+.blog-content .main-column
+  padding-bottom: 100px
+
+.blog-content h1
+  margin-bottom: 65px
+
+.blog-content article ul
+  padding-left: 20px
+
+.blog-content article li
+  margin: 0.5em 0
+
+.blog-content article h3
+  font-weight: 300
+  font-size: 24px
+  text-transform: uppercase
+  margin-top: 2em
+  font-family: 'brandon-grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+.blog-content article h4
+  font-weight: 300
+  font-size: 18px
+  text-transform: uppercase
+  margin-top: 2em
+  font-family: 'brandon-grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+.blog-content article h1
+  font-size: 36px
+  line-height: 1.1
+  margin-bottom: 20px
+  font-family: 'brandon-grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-weight: 300
+  text-transform: uppercase
+
+.blog-content article h1 a
+  color: inherit
+
+.blog-content article h1:hover a,
+.blog-content article h1 a:hover
+  color: #218bc3
+
+.blog-content article img.full
+  width: 100% !important
+
+.blog-content article .videoembed
+  float: none
+  clear: both
+  width: 100%
+  position: relative
+  padding-bottom: 56%
+
+.blog-content article .videoembed iframe
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.blog-content article .byline
+  height: 50px
+
+.blog-content article .byline .portrait
+  float: left
+  margin-right: 10px
+
+.blog-content article .byline span
+  display: block
+
+.blog-content article .byline .name a
+  color: inherit
+
+.blog-content article .byline .name a:hover
+  color: #218bc3
+
+.blog-content article .byline .title
+  color: #999
+  font-size: 13px
+  text-transform: uppercase
+
+.blog-content .paging-navigation
+  height: 40px
+
+.blog-content .paging-navigation .nav-previous
+  float: left
+
+.blog-content .paging-navigation .nav-next
+  float: right
+
+.blog-post .blog-title
+  font-size: 16px
+  margin-bottom: 15px
+  font-weight: normal
+
+.about-google-ventures
+  line-height: 2
+  color: #666
+
+@media screen and (max-width: 740px)
+  .library article h1
+    font-size: 36px
+
+  .library article h2
+    font-size: 24px
+
+  .library article ul
+    padding-left: 20px
+
+  .library-follow
+    position: relative
+    top: 0
+    right: 0
+    clear: left
+    min-height: 100px
+    margin-left: 40px
+
