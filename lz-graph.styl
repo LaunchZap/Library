@@ -1,0 +1,29 @@
+@import 'units'
+
+.lzgraph
+	width 100%
+	top 0
+	
+	& > lzgraph
+		display block
+	.lzleft
+		position fixed
+		left 0
+		top 0
+	.lzright
+		position fixed
+		right 0
+		top 0
+	.lztop
+		margin 0 auto
+		
+@media screen and (phone)
+	.lzgraph
+		display none
+
+	.home .content-frame
+	  	background: #ffffff url(../images/home/bg.png) 100% 0 no-repeat
+
+@media screen and (tablet)
+  	.home .content-frame
+    	background: #fff
