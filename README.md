@@ -20,15 +20,32 @@ The documentation for Stylus and Nib are in:
 http://nibstyl.us/
 http://learnboost.github.io/stylus/
 
+/******************************************************/
+
+to install Library in your project, you can download it or clone the repository as a submodule in your project.
+If you install it as a submodule, you will have EVER the latest version
+
+Note: the [main]$ bits on each line represents your bash prompt. You should only type the stuff after the $.
+
+
+Set up the submodule for the first time:
+´[~]$  cd ~/main/
+[main]$  git submodule add git://github.com/my/submodule.git ./subm
+[main]$  git submodule update --init
+[main]$  git commit ./submodule -m "Added submodule as ./subm"´
+
+´git submodule foreach git pull´
+
+
 
 Run Stylus specifyng the output folder as:
 
-´cd ~/library/´
+´[~]$cd ~/library/´
 
-´stylus -u nib /source/library.styl --o /css´
+´[main]$ stylus -u nib /source/library.styl --o /css´
 
 You can also use the -w or --watch option to automatically watch your Library files and recompile when any changes are saved.
 
-´stylus -w -u nib /source/library.styl --o /css´
+´[main]$ stylus -w -u nib /source/library.styl --o /css´
 
 
