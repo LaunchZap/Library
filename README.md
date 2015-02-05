@@ -16,6 +16,9 @@ If you are not sure you have installed stylus and nib run:
 The documentation for Stylus and Nib are in:
 
 http://nibstyl.us/
+
+and
+
 http://learnboost.github.io/stylus/
 
 to install Library in your project, you can download it or clone the repository as a submodule in your project.
