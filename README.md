@@ -8,6 +8,8 @@ it requieres:
 * Stylus
 * nib
 
+## Requs install
+
 If you are not sure you have installed stylus and nib run:
 
 	npm install -g stylus
@@ -20,6 +22,8 @@ http://nibstyl.us/
 and
 
 http://learnboost.github.io/stylus/
+
+## Library Install
 
 to install Library in your project, you can download it or clone the repository as a submodule in your project.
 If you install it as a submodule, you will have EVER the latest version
@@ -50,3 +54,8 @@ You can also use the -w or --watch option to automatically watch your Library fi
 
 
 	[launchzap]$ stylus -w -u nib ./source/library.styl --o ./css
+
+
+##UNITS
+
+Some of the most important changues in the CSS can be performed in ~/library/sources/units.styl
