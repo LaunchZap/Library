@@ -23,10 +23,12 @@ http://learnboost.github.io/stylus/
 
 Run Stylus specifyng the output folder as:
 
-´cd ~/main/´
+´cd ~/library/´
 
 ´stylus -u nib /source/library.styl --o /css´
 
 You can also use the -w or --watch option to automatically watch your Library files and recompile when any changes are saved.
 
 ´stylus -w -u nib /source/library.styl --o /css´
+
+
