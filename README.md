@@ -42,13 +42,13 @@ If you want to actualize the submodule
 Run Stylus specifyng the output folder as:
 
 
-[~]$cd ~/library/
-[launchzap]$ stylus -u nib /source/library.styl --o /css
+	[~]$cd ~/library/
+	[launchzap]$ stylus -u nib /source/library.styl --o /css
 
 
 You can also use the -w or --watch option to automatically watch your Library files and recompile when any changes are saved.
 
 
-[launchzap]$ stylus -w -u nib /source/library.styl --o /css
+	[launchzap]$ stylus -w -u nib /source/library.styl --o /css
 
 
