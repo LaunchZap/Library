@@ -1,8 +1,7 @@
 Library
 =======
 
-a Stylus Mobile-first high-scalable and simple stylesheet for ANY web project.
-
+a Stylus Mobile-first high-scalable completely customizable and simple stylesheet for ANY web project.
 
 it requieres:
 * Node-js
@@ -16,10 +15,8 @@ If you are not sure you have installed stylus and nib run:
 
 The documentation for Stylus and Nib are in:
 
-
 http://nibstyl.us/
 http://learnboost.github.io/stylus/
-
 
 to install Library in your project, you can download it or clone the repository as a submodule in your project.
 If you install it as a submodule, you will have EVER the latest version
@@ -50,5 +47,3 @@ You can also use the -w or --watch option to automatically watch your Library fi
 
 
 	[launchzap]$ stylus -w -u nib /source/library.styl --o /css
-
-
