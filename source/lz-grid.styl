@@ -15,11 +15,10 @@
 // Functions
 // ---------
 
-grid(class = 'phone' , 'columns')
+grid(class = 'phone', columns = 'columns')
 
   // Iterate through our columns
-  for colCount in (1 .. columns)
-
+  for colCount in (1 ..columns)
     // Convert each column count to a percentage: i.e. 1/12
     percentWidth = 1% * ((colCount / columns) * 100)
 

@@ -40,8 +40,8 @@ Set up the submodule for the first time:
 
 
 If you want to actualize the submodule
-	git submodule foreach git pull
 
+	git submodule foreach git pull
 
 Run Stylus specifyng the output folder as:
 
@@ -59,3 +59,4 @@ You can also use the -w or --watch option to automatically watch your Library fi
 ##UNITS
 
 Some of the most important changues in the CSS can be performed in ~/library/sources/units.styl
+
