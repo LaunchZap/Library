@@ -15,10 +15,10 @@
 // Functions
 // ---------
 
-grid(class = 'phone', columns = 'columns')
+grid(class = 'phone', columns)
 
   // Iterate through our columns
-  for colCount in (1 ..columns)
+  for colCount in (1.. columns)
     // Convert each column count to a percentage: i.e. 1/12
     percentWidth = 1% * ((colCount / columns) * 100)
 
@@ -51,12 +51,12 @@ grid(class = 'phone', columns = 'columns')
     height auto
     ms-interpolation-mode bicubic
 
-grid()
+grid('phone', columns)
 
 @media (min-width: 48em)
 
-  grid('tablet')
+  grid('tablet', columns)
 
 @media (min-width: 64em)
 
-  grid('desktop')
+  grid('desktop', columns)
