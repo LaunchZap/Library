@@ -18,12 +18,11 @@
 grid(class = 'phone', columns)
 
   // Iterate through our columns
-  for colCount in (1.. columns)
-    // Convert each column count to a percentage: i.e. 1/12
-    percentWidth = 1% * ((colCount / columns) * 100)
-
+  for count in (1.. columns)
+    // Turn each column count to a percentage: i.e. 1/12
+    percentWidth = 1% * ((count / columns) * 100)
     // Column class for the width
-    .l_{class}_{colCount}
+    .l_{class}_{count}
       width percentWidth
 
 // Styles
@@ -53,10 +52,10 @@ grid(class = 'phone', columns)
 
 grid('phone', columns)
 
-@media (min-width: 48em)
+@media (min-width: tablet)
 
   grid('tablet', columns)
 
-@media (min-width: 64em)
+@media (min-width: phone)
 
   grid('desktop', columns)
