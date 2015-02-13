@@ -1,0 +1,76 @@
+
+// Columnus
+// ===========
+
+// Based on the 12 column nestable Foundation Grid:
+// http://foundation.zurb.com/docs/components/grid.html
+// -----------------------------------------------------------------------------
+
+// Imports
+// -------
+// all the units and other imports are defined in the units file.
+@import 'units'
+
+
+// Function grid
+// ---------
+
+grid(name = '$bp1', columns = 12)
+
+  // Iterate through our columns
+  for count in (1.. columns)
+    // Turn each column count to a percentage: i.e. 1/12
+    percentWidth = 1% * ((count / columns) * 100)
+    // Column name for the width
+    .--columns_{name}_{count}
+      width percentWidth
+      
+
+// Function Breakpoints
+//.......
+breakpoint(Breakpoint-Number, columns)
+  // Iterate through our breakpoints
+  for count in (1.. Breakpoint-Number)
+    // transform the count variable in
+    // a valid variable from "units"
+    Breakpoint-id = define(prefix + '-' + count)
+    // define the media breakpoints
+    @media (min-width: Breakpoint-id)
+    //create the columns styles
+      grid(Breakpoint-id-named, columns)
+    
+
+    // prefix = 'border'
+    // border = { color: #000, length: 1px, style: solid }
+
+    // for prop, val in border
+    //   define(prefix + '-' + prop, val)
+
+    // body
+    //   border: border-length border-style border-color
+
+
+// Styles
+// ------
+
+.--columns_grid_wrap,
+.--columns_grid
+  overflow hidden
+
+.--columns_grid
+  list-style none
+  margin 0 -1em
+  clearfix()
+
+  *
+    box-sizing border-box
+
+.l_column
+  float left
+  position relative
+  padding 0 1em 2em
+
+  img
+    max-width 100%
+    height auto
+    ms-interpolation-mode bicubic

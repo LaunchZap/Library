@@ -58,7 +58,9 @@ You can also use the -w or --watch option to automatically watch your Library fi
 
 ##UNITS
 
-Some of the most important changues in the CSS can be performed in ~/library/sources/units.styl
+Some of the most important changues in the CSS can be performed in 
+	
+	$~/library/sources/units.styl
 
 
 
@@ -71,8 +73,15 @@ The absence of grid rows. While they can provide more layout options, grid rows 
 Simplification. This grid provides a simple, "n" column structure that can be quickly implemented and modified. Let’s keep things light weight!
 
 	<div class="l_grid">
-	  <div class="small_6 med_4 large_3 l_column">...</div>
-	  <div class="small_6 med_4 large_3 l_column">...</div>
-	  <div class="small_6 med_4 large_3 l_column">...</div>
-	  <div class="small_6 med_4 large_3 l_column">...</div>
+	  <div class="phone_6 tablet_4 desktop_3 l_column">...</div>
+	  <div class="phone_6 tablet_4 desktop_3 l_column">...</div>
+	  <div class="phone_6 tablet_4 desktop_3 l_column">...</div>
+	  <div class="phone_6 tablet_4 desktop_3 l_column">...</div>
 	</div>
+
+##Style
+We used BEM principles to create a set of front-end development techniques and tools, that allow us to build websites quickly and maintain them over a long time.
+
+    .block{}
+    .block__element{}
+    .block--modifier{}

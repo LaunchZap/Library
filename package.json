@@ -1,0 +1,31 @@
+{
+  "name": "Library",
+  "version": "0.0.0",
+  "description": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LaunchZap/Library.git"
+  },
+  "keywords": [
+    "css",
+    "stylus",
+    "mobile",
+    "first"
+  ],
+  "author": "Juan Jose Albán",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/LaunchZap/Library/issues"
+  },
+  "homepage": "https://github.com/LaunchZap/Library"
+  "dependencies": {
+    "Normalize": ">= 3.0.2",
+    "stylus": "latest"
+    "nib": "latest"
+    "canvas": "canvas"
+  },
+}

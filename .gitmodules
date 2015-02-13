@@ -1,0 +1,6 @@
+[submodule "reset.styl"]
+	path = reset.styl
+	url = git://github.com/kizu/reset.styl.git
+[submodule "source/components/reset"]
+	path = source/components/reset
+	url = git://github.com/kizu/reset.styl.git

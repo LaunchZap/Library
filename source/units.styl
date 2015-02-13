@@ -1,108 +1,154 @@
-/*units styl*/
-/*==========*/
-// Imports
-// -------
+/*------------------------------------*\
+    $Units
+\*------------------------------------*/
+
+// This file is the base of the project :)
+// Anything you changue in this file will generate
+// big changues in your final CSS
+
+/*------------------------------------*\
+    $Imports
+\*------------------------------------*/
+
 // Requires nib, unless you would rather handle the vendor prefixes yourself
 @import 'nib'
-@import 'nib/vendor'
-@import 'nib/gradients'
+//Or you may also pick and choose based on the directory structure in ./lib
+// 	@import 'nib/gradients'
+// 	@import 'nib/overflow'
+// 	@import 'nib/normalize'
+//	@import 'nib/vendor'
+//	@import 'nib/gradients'
+@import 'units'
+@import 'components/text'
+// @import 'components/grid'
+@import 'components/graph'
+@import 'components/buttons'
+@import 'components/forms'
 
-// Grid system
+/*------------------------------------*\
+    $Grid
+\*------------------------------------*/
 
-columns = 12
+body__columns--number 	= 12
 
-// @media querys
+/*------------------------------------*\
+    $Media breakpoints
+    The breakpoints has been placen in EM,
+    so, the zoom doesn't affect design
+    
+    //the number of breakpoints is FIXED
+    in this version of the code.
+    
+\*------------------------------------*/
+Breakpoint-Number 		= 5 		// number of breakpoints
+prefix 					= '$bp'				// defines the prefix for the breakpoints
+$bp-1 					= 30em     			// 480px
+$bp-2 					= 37.5em   			// 600px
+$bp-3 					= 48em   			// 768px
+$bp-4 					= 56.25em  			// 900px
+$bp-5 					= 68.75em  			// 1100px
 
-desktop = 80em
-tablet 	= 64em
-phone 	= 48em
+/*------------------------------------*\
+    $Colors
+    in this section you can set colors
+    as variables that you can reuse.
+	example:
+	
+	greyLight = #EEEEEE
+	greyMedium = #BBBBBB
+	greyTranslucid = rgba(greyDark, .6)
+	
+	and then reuse:
+	
+	p--color = greyLight
+\*------------------------------------*/
 
-// Colors
+/*------------------------------------*\
+    $Text
+\*------------------------------------*/
 
-Orange	= #fC6634
-greyLight = #EEEEEE
-greyMedium = #BBBBBB
-greyDark = #444444
-grisTransparente = rgba(greyDark, .6)
-azulClaro = #3399CC
-azulOscuro = #006699
-verdeClaro = #CCCC33
-verdeOscuro = #339933
-OrangeClaro = #FFCC33
-OrangeOscuro = #FF9933
+//colors
 
-//Text Colors
-
-pColor = #666666
-hColor = #3399cc
-aColor = #444
-
-// buttonColors
-ButtonBackgroundColor = 'black'
-InputBackgroundColor = 'black'
-ButtonColor = 'black'
-InputColor = 'black'
-ButtonHoverColor = 'black'
-ButtonActiveColor = 'black'
-ButtonDisabledColor = 'white'
-ButtonSelectedColor = '(black, .8)'
-ButtonDisabledColor = 'black'
-ButtonShadow = #000000
-
-// heights
-
-heightHeader = 4rem
-heightContentHero = 77vh
-heightFooter = 27vh
-heightForm = 45px
-
-// sizes
-
-logoSizeWide = 8rem
-logoSizeMedium = 3rem
-logoSizeNarrow = 2rem
-sizeMicro = 0.1rem
-sizeTiny = 9px
-sizeMini = 0.5rem
-sizeSmall = 0.75rem
-sizeNormal = 1rem
-sizeMedium = 1.25rem
-sizeLarge = 1.5rem
-sizeExtralarge = 2rem
-sizeGiant = 3rem
+p--Color 				= #666666
+text_h--Color 			= #3399cc
+text_a--Color 			= #444
 
 // font weight
 
-wLight 		= 300
-wNormal 	= 400
-wBolder 	= 500
-wSemiBold 	= 600
-wBold 		= 700
-wExtraBold 	= 800
+text_weight--Light 		= 300
+text_weight--Normal 	= 400
+text_weight--Bolder 	= 500
+text_weight--SemiBold 	= 600
+text_weight--Bold 		= 700
+text_weight--ExtraBold 	= 800
 
-//font size
+//H1 clip image background
+	// for .background-clip .content .texture-1
+h1--background-clip-1 	= ('../images/text-texture-1.jpg')
+	// for .background-clip .content .texture-2
+h1--background-clip-2 	= ('../images/text-texture-2.jpg')
+	// for .background-clip .content .texture-3
+h1--background-clip-3 	= ('../images/text-texture-3.jpg')
+	// for .background-clip .content .texture-4
+h1--background-clip-4 	= ('../images/text-texture-4.jpg')
 
-	//@media screen and (min-width: 35.5em)
-	//@media screen and (min-width: 48em)
-	//@media screen and (min-width: 64em)
-	//@media screen and (min-width: 80em)
 
+/*------------------------------------*\
+    $Button Colors
+\*------------------------------------*/
+
+ButtonBackgroundColor 	= 'black'
+InputBackgroundColor 	= 'black'
+ButtonColor 			= 'black'
+InputColor 				= 'black'
+ButtonHoverColor 		= 'black'
+ButtonActiveColor 		= 'black'
+ButtonDisabledColor 	= 'white'
+ButtonSelectedColor 	= '(black, .8)'
+ButtonDisabledColor 	= 'black'
+ButtonShadow 			= 'black'
+
+/*------------------------------------*\
+    $Heights
+\*------------------------------------*/
+
+heightHeader 			= 4rem
+heightContentHero 		= 77vh
+heightFooter 			= 27vh
+heightForm 				= 45px
+
+/*------------------------------------*\
+    $Sizes
+\*------------------------------------*/
+
+logoSizeWide 			= 8rem
+logoSizeMedium 			= 3rem
+logoSizeNarrow 			= 2rem
+sizeMicro 				= 0.1rem
+sizeTiny 				= 9px
+sizeMini 				= 0.5rem
+sizeSmall 				= 0.75rem
+sizeNormal 				= 1rem
+sizeMedium 				= 1.25rem
+sizeLarge 				= 1.5rem
+sizeExtralarge 			= 2rem
+sizeGiant 				= 3rem
 
 // z-index
 
-contentHeaderZIndex = 16
-lzgraphZIndex = -16
-backgroundHeaderZIndex = 12 
-contentPZindex = 11
-backgroundMain = 10
-backgroundFooterZindex = backgroundHeaderZIndex
-ribbonZIndex = lzgraphZIndex
-footerZIndex = contentHeaderZIndex
+Header__content--ZIndex 	= 16
+lzgraph--ZIndex 			= -16
+Header__background--ZIndex 	= 12 
+index__content--PZ 			= 11
+Main__background--Zindex	= 10
+Footer__background--Zindex 	= backgroundHeaderZIndex
+ribbon__ZIndex 				= lzgraphZIndex
+footer__ZIndex 				= contentHeaderZIndex
 
 //Widths
 
-widthColumnaWide 	= 48vw
-widthColumnaNarrow 	= 80vw
-widthColumnaMedium 	= 90vw
-widthImagesBackgr 	= 100vw
-widthParagraph 		= 50%
+widthColumnaWide 		= 48vw
+widthColumnaNarrow 		= 80vw
+widthColumnaMedium 		= 90vw
+widthImagesBackgr 		= 100vw
+widthParagraph 			= 50%
