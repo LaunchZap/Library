@@ -1,22 +1,12 @@
-
-// Columnus
-// ===========
-
-// Based on the 12 column nestable Foundation Grid:
-// http://foundation.zurb.com/docs/components/grid.html
-// -----------------------------------------------------------------------------
-
-// Imports
-// -------
-// all the units and other imports are defined in the units file.
-@import 'units'
-
+/*------------------------------------*\
+    $Grid
+    Based on the 12 column nestable Foundation Grid:
+    http://foundation.zurb.com/docs/components/grid.html
+\*------------------------------------*/
 
 // Function grid
 // ---------
-
-grid(name = '$bp1', columns = 12)
-
+grid(name = '$bp-1', columns = 12)
   // Iterate through our columns
   for count in (1.. columns)
     // Turn each column count to a percentage: i.e. 1/12
@@ -28,27 +18,18 @@ grid(name = '$bp1', columns = 12)
 
 // Function Breakpoints
 //.......
-breakpoint(Breakpoint-Number, columns)
+breakpoint(Breakpoint-Number = 5, columns = 12)
   // Iterate through our breakpoints
   for count in (1.. Breakpoint-Number)
     // transform the count variable in
     // a valid variable from "units"
-    Breakpoint-id = define(prefix + '-' + count)
+    Breakpoint-id = define(prefix + '-' + count,)
     // define the media breakpoints
-    @media (min-width: Breakpoint-id)
-    //create the columns styles
-      grid(Breakpoint-id-named, columns)
+      @media (min-width: Breakpoint-id) 
+        grid(Breakpoint-id, columns)
     
 
-    // prefix = 'border'
-    // border = { color: #000, length: 1px, style: solid }
-
-    // for prop, val in border
-    //   define(prefix + '-' + prop, val)
-
-    // body
-    //   border: border-length border-style border-color
-
+breakpoint(5, 12)
 
 // Styles
 // ------

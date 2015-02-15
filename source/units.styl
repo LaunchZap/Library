@@ -1,31 +1,4 @@
 /*------------------------------------*\
-    $Units
-\*------------------------------------*/
-
-// This file is the base of the project :)
-// Anything you changue in this file will generate
-// big changues in your final CSS
-
-/*------------------------------------*\
-    $Imports
-\*------------------------------------*/
-
-// Requires nib, unless you would rather handle the vendor prefixes yourself
-@import 'nib'
-//Or you may also pick and choose based on the directory structure in ./lib
-// 	@import 'nib/gradients'
-// 	@import 'nib/overflow'
-// 	@import 'nib/normalize'
-//	@import 'nib/vendor'
-//	@import 'nib/gradients'
-@import 'units'
-@import 'components/text'
-// @import 'components/grid'
-@import 'components/graph'
-@import 'components/buttons'
-@import 'components/forms'
-
-/*------------------------------------*\
     $Grid
 \*------------------------------------*/
 
@@ -40,7 +13,7 @@ body__columns--number 	= 12
     in this version of the code.
     
 \*------------------------------------*/
-Breakpoint-Number 		= 5 		// number of breakpoints
+Breakpoint-Number 		= 5 				// number of breakpoints
 prefix 					= '$bp'				// defines the prefix for the breakpoints
 $bp-1 					= 30em     			// 480px
 $bp-2 					= 37.5em   			// 600px
@@ -112,10 +85,10 @@ ButtonShadow 			= 'black'
     $Heights
 \*------------------------------------*/
 
-heightHeader 			= 4rem
-heightContentHero 		= 77vh
-heightFooter 			= 27vh
-heightForm 				= 45px
+Header--height			= 4rem
+Content__Hero--height	= 77vh
+Footer--height 			= 27vh
+Form--height			= 45px
 
 /*------------------------------------*\
     $Sizes
@@ -134,7 +107,9 @@ sizeLarge 				= 1.5rem
 sizeExtralarge 			= 2rem
 sizeGiant 				= 3rem
 
-// z-index
+/*------------------------------------*\
+    $ZPositions
+\*------------------------------------*/
 
 Header__content--ZIndex 	= 16
 lzgraph--ZIndex 			= -16
