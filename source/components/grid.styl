@@ -16,17 +16,15 @@ grid(name = '$bp-1', columns = 12)
     // Turn each column count to a percentage: i.e. 1/12
     percentWidth = 1% * ((count / columns) * 100)
     // Column name for the width
-      Fname(name, count)
-        FncName = lookup('columns_'+name+'_'+count+'()')
-        FncName(name, percentWidth)      
-          @media name
-            width percentWidth
-            &:after
-              display: flex;
-              content: " ";
-              clear: both;
-              *zoom: 1;
-      
+      .--columns_{name}_{count}
+        @media name
+          width percentWidth
+          &:after
+            display: table;
+            content: " ";
+            clear: both;
+            *zoom: 1;
+
 // Function Breakpoints
 //.......
 
