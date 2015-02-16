@@ -4,32 +4,54 @@
     http://foundation.zurb.com/docs/components/grid.html
 \*------------------------------------*/
 
+@import '../units'
+
 // Function grid
 // ---------
+
+
 grid(name = '$bp-1', columns = 12)
   // Iterate through our columns
   for count in (1.. columns)
     // Turn each column count to a percentage: i.e. 1/12
     percentWidth = 1% * ((count / columns) * 100)
     // Column name for the width
-    .--columns_{name}_{count}
-      width percentWidth
+      Fname(name, count)
+        FncName = lookup('columns_'+name+'_'+count+'()')
+        FncName(name, percentWidth)      
+          @media name
+            width percentWidth
+            &:after
+              display: flex;
+              content: " ";
+              clear: both;
+              *zoom: 1;
       
-
 // Function Breakpoints
 //.......
-breakpoint(Breakpoint-Number = 5, columns = 12)
-  // Iterate through our breakpoints
-  for count in (1.. Breakpoint-Number)
-    // transform the count variable in
-    // a valid variable from "units"
-    Breakpoint-id = define(prefix + '-' + count,)
-    // define the media breakpoints
-      @media (min-width: Breakpoint-id) 
-        grid(Breakpoint-id, columns)
-    
 
-breakpoint(5, 12)
+grid('bp-1')
+
+@media bp-1
+
+  grid('bp-2')
+
+@media bp-2
+
+  grid('bp-3')
+
+@media $bp-3
+
+  grid('bp-4')
+
+@media bp-4
+
+  grid('$bp-5')
+
+@media bp-5
+
+  grid('bp-5')
+
 
 // Styles
 // ------

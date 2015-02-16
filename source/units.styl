@@ -14,12 +14,15 @@ body__columns--number 	= 12
     
 \*------------------------------------*/
 Breakpoint-Number 		= 5 				// number of breakpoints
-prefix 					= '$bp'				// defines the prefix for the breakpoints
-$bp-1 					= 30em     			// 480px
-$bp-2 					= 37.5em   			// 600px
-$bp-3 					= 48em   			// 768px
-$bp-4 					= 56.25em  			// 900px
-$bp-5 					= 68.75em  			// 1100px
+prefix 					= 'bp'
+
+// defines the prefix for the breakpoints
+Prefix-list 			= bp-1 bp-2 bp-3 bp-4 bp-5	
+bp-1 					= '(min-width: 30em   )'  			// 480px
+bp-2 					= '(min-width: 37.5em )'  			// 600px
+bp-3 					= '(min-width: 48em   )'			// 768px
+bp-4 					= '(min-width: 56.25em)'  			// 900px
+bp-5 					= '(min-width: 68.75em)'  			// 1100px
 
 /*------------------------------------*\
     $Colors
