@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    $Grid-Function
+    Based on the 12 column nestable Foundation Grid
+    but with 'n' columns from the variable columns:
+    http://foundation.zurb.com/docs/components/grid.html
+\*------------------------------------*/
+* 
+  zoom: 
+
+grid(count, mediaq, columns = 12)
+  // Iterate through our columns
+    @media mediaq
+    percentWidth = 1% * ((count / columns) * 100)
+    // Column name for the width
+        width percentWidth
+        overflow hidden
+        &:after
+          display: flex
+          content: " "
+          clear: both

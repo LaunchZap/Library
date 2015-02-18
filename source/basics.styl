@@ -1,22 +1,27 @@
-// Columnus
-// ===========
-
-// Based on the 12 column nestable Foundation Grid:
-// http://foundation.zurb.com/docs/components/grid.html
-// -----------------------------------------------------------------------------
-
-// Imports
-
 .mobile // the div will be visible in all medias.
-
+	@media screen and ()
+		
 .mobile-only // whe div will be visible only in mobile.
-	
+	@media screen and ()
+		
 .tablet // the div will be visible in tablets and desktop but no in mobile.
-	
+	@media screen and (orientation: portrait)
+		
 .tablet-only // the div will be visible only in tablets.
-
+	@media screen and (orientation: portrait)
+		
 .desktop // the content will be visible only in desktop.
-	
-.print // the content will be visible only in printed media.
-	
+	@media screen and (orientation: portrait)
+		
+.print // the content will be visible *only* in printed media.
+	@media print
+		@import '/media_print/printed'
 .speech // the content will be rendered for speech synthesizers.
+	
+
+
+ @media screen and (min-width: 30em   )  			// 480px
+ @media screen and (min-width: 37.5em )  			// 600px
+ @media screen and (min-width: 48em   )				// 768px
+ @media screen and (min-width: 56.25em)  			// 900px
+ @media screen and (min-width: 68.75em)  			// 1100px

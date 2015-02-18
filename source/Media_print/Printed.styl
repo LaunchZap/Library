@@ -1,0 +1,116 @@
+/**
+* CSS theme for the Clearly browser extension by Evernote.
+* See: www.evernote.com/clearly/
+*
+* Options used alongside this CSS:
+*
+* Fonts:
+*   Body font:      Ubuntu
+*   Header font:    Verdana, Helvetica
+*   Monospace font: Droid Sans Mono
+*
+* Colors:
+*   Background:     #FFFFFF
+*   Foregound:      #333333
+*   Links:          #076FB5
+*
+* Font & Line Size:
+*   Base Size:      1.0em (16px)
+*   Line Height:    1.2em
+*   Line Width:     90%
+*
+* Clearly specific options:
+*   Base CSS:       Notable
+*   Footnote:       On Print
+*   Text Align:     Normal
+*   Large Graphics: Show Always
+* 
+* Note: Should you be a stickler for formatting, once inserted into 
+* the CSS textbox in Clearly, the entire sheet, while it stays 
+* intact, all EOL and misc. whitespaces are removed. Re-structuring 
+* this CSS from the textbox can be painful if you care to do so. Not 
+* that I've done that or anything... ;)
+**/
+ 
+/**
+* Original CSS
+* CSS definitions from original style-sheet, by 
+* jamesgrant(https://gist.github.com/jamesgrant) found here: 
+* https://gist.github.com/1852418 
+**/
+/**
+  #text blockquote { 
+		border-color: #bababa; 
+		color: #656565; 
+	}
+	#text thead { 
+		background-color: #dadada; 
+	}
+	#text tr:nth-child(even) { 
+		background: #E0E0E0; 
+	}
+	#text th { 
+		border-bottom: 1px dashed #888; 
+	}
+	#text hr { 
+		border-color: #c5c5c5; 
+	}
+	#text code, 
+	#text pre { 
+		padding: 0.5em 1em; 
+		background-color: #E0E0E0; 
+		border-radius: 6px;
+		word-wrap: break-word;
+	} 
+**/
+ 
+/** 
+* Active CSS
+* Commented, re-formatted and adapted CSS based on fork of original work (above), by Edditoria (https://gist.github.com/Edditoria), located here: https://gist.github.com/4292306 
+**/
+ 
+/* Links */
+#text a:visited {
+  color: #076FB5;
+  text-decoration: none;
+}
+ 
+/* Quoted & Preformatted text */
+#text blockquote {
+  padding-left: 16px;
+  border-left: 6px solid #BBB;
+  color: #666;
+}
+#text pre {
+  margin: 1em 0;
+  padding: .5em .75em;
+  max-width: 100%;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  background-color: #F8F8F8;
+  font-size: 12px;
+}
+#text pre code {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  white-space: pre-wrap;
+  word-wrap: break-word; /* IE */
+}
+#text code {
+  margin: 0 2px;
+  padding: 0px 5px;
+  border: 1px solid #EAEAEA;
+  border-radius: 3px;
+  background-color: #F8F8F8;
+  white-space: nowrap;
+  color: #666;
+}
+ 
+/* Table Elements */
+#text table { max-width: 100%; }
+#text thead { background-color: #DADADA; }
+#text tr:nth-child(even) { background: #E0E0E0; }
+#text th { border-bottom: 1px dashed #888; }
+#text hr { border-color: #C5C5C5; }
