@@ -5,14 +5,19 @@
 \*------------------------------------*/
 * 
   zoom: 
-
+  
+if columns > 0
+  columns = columns
+else
+  columns = 12
+  
 grid(count, mediaq, columns = 12)
   // Iterate through our columns
     @media mediaq
     percentWidth = 1% * ((count / columns) * 100)
     // Column name for the width
-        width percentWidth
-        overflow hidden
+      width percentWidth
+      overflow hidden
         &:after
           display: flex
           content: " "
@@ -167,50 +172,54 @@ smartphone__portrait--only()
 tablet--only()
   @media bp-smartphone
   @media bp-tablet
+  @media printable
   @media bp-desktop
   @media giants
     visibility hidden
-
+bp-
   @media tablet
     grid(rows-width, bp-tablet, columns)
-    clearfix()
+bp-    clearfix()
     visibility visible !important 
   
 tablet__landscape--only()
   @media bp-smartphone
   @media bp-tablet
+  @media printable  
   @media bp-desktop
   @media giants
     visibility hidden
-
+bp-
   @media tablet__landscape
     grid(rows-width, bp-bp-tablet__landscape, columns)
-    clearfix()
+bp-    clearfix()
     visibility visible !important 
   
 tablet__portrait--only()
   @media bp-smartphone
   @media bp-tablet
+  @media printable
   @media bp-desktop
   @media giants
     visibility hidden
-
+bp-
   @media tablet__portrait
     grid(rows-width, bp-bp-tablet__portrait, columns)
-    clearfix()
+bp-    clearfix()
     visibility visible !important 
   
 desktop--only()
   @media bp-smartphone
   @media bp-tablet
   @media bp-desktop
+  @media printable
   @media giants
     visibility hidden
   
-  @media desktop
+  @media desktobp-p
     grid(rows-width, bp-desktop, columns)
     clearfix()
-    visibility visible !important
+    visibility bp-visible !important
     
   
 giants--only()
@@ -229,9 +238,9 @@ printable--only()
   @media bp-smartphone
   @media bp-tablet
   @media bp-desktop
-  @media giants
+  @media bp-giants
     visibility hidden
 
-  @media printable
+  @media bp-printable
     visibility visible !important
     
