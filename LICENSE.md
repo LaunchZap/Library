@@ -11,10 +11,5 @@
 1) Library as a whole is released under "THE BEER-COFEE-WARE" Public License
 2) the contributors are:
 	a) Juan José Albán Ortiz
-
-
-	  -----BEGIN GEEK CODE BLOCK-----
-    Version: 3.1
-    GAT/CS d- s+: a C++ UB++++++ P--- L- E- W++ N+ o K- w--- O- M V-- PS++
-    PE- Y PGP++ t-- 5- X R tv-- b+++ DI++++ D--- G e h---- r--- y+++
-    ------END GEEK CODE BLOCK------
+    GAT/CS d- s+: a C++ UB++ P--- L- E- W++ N+ o K- w--- O- M V-- PS++
+    PE++ Y t-- tv---- b++++ DI++++ D--- G e h--- r+ y++++
