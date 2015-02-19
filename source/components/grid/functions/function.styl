@@ -1,0 +1,18 @@
+/*------------------------------------*\
+   $Grid-Function
+   works as any grid, but doesn't make any
+   mess in the final code. 
+\*------------------------------------*/
+mediaq = bp-smartphone
+
+grid(count = 1, mediaq = bp-smartphone, columns = 12)
+  percentWidth = 1% * ((count / columns) * 100)
+  @media mediaq
+    width percentWidth
+    overflow hidden
+      &:after
+        display: flex
+        content: " "
+        clear: both
+        
+grid(1, bp-smartphone, 12)

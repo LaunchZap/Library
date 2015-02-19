@@ -15,23 +15,22 @@
 // Requires nib, unless you would rather handle the vendor prefixes yourself
 @import 'nib'
 //Or you may also pick and choose based on the directory structure in ./lib
+@import 'components/grid'
 // 	@import 'nib/gradients'
 // 	@import 'nib/overflow'
 // 	@import 'nib/normalize'
 //	@import 'nib/vendor'
 //	@import 'nib/gradients'
-// @import 'components/text'
-@import 'components/grid'
-// @import 'components/graph'
-// @import 'components/buttons'
-// @import 'components/forms'
+// 	@import 'components/text'
+// 	@import 'components/graph'
+// 	@import 'components/buttons'
+// 	@import 'components/forms'
 
 /*------------------------------------*\
-    $Vendor-Prefixes
-    if 
+    $vendor-Prefixes
 \*------------------------------------*/
-vendor-prefixes = o ms webkit moz official
 
+vendor-prefixes ?= o webkit moz official
 
 /*********************************
 $Global: Layout

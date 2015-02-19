@@ -1,0 +1,86 @@
+/*------------------------------------*\
+    $Grid- functions
+\*------------------------------------*/
+
+  
+smartphone(count)
+  grid(count, bp-smartphone, columns)
+    clearfix()
+    visibility visible !important
+
+smartphone__landscape(rows-width)
+  grid(rows-width, bp-smartphone__landscape, columns)
+    clearfix()
+    visibility visible !important
+
+  @media (bp-smartphone__portrait)
+    visibility hidden
+
+  
+smartphone__portrait(rows-width)
+  @media bp-smartphone__landscape
+    visibility hidden
+
+  grid(rows-width, bp-smartphone__portrait, columns)
+    clearfix()
+    visibility visible !important
+
+tablet(rows-width)
+  grid(rows-width, bp-tablet, columns)
+    clearfix()
+    visibility visible !important
+
+  @media bp-smartphone
+    visibility hidden
+    
+
+tablet__landscape(rows-width)
+  grid(rows-width, bp-tablet__landscape, columns)
+    clearfix()
+    visibility visible !important
+
+  @media bp-smartphone, bp-tablet__portrait
+      visibility hidden
+
+tablet__portrait(rows-width)
+  grid(rows-width, bp-tablet__portrait, columns)
+    clearfix()
+    visibility visible !important
+
+  @media bp-smartphone, bp-tablet__landscape
+      visibility hidden
+
+desktop(rows-width)
+  grid(rows-width, bp-desktop, columns)
+    clearfix()
+    visibility visible !important
+
+  @media bp-smartphone, bp-tablet
+    visibility hidden
+
+
+giants(rows-width) 
+  grid(rows-width, bp-giants, columns)
+    clearfix()
+    visibility visible !important
+
+  @media bp-smartphone, bp-tablet, bp-desktop
+    visibility hidden
+        
+
+
+printable(rows-width)
+  @media bp-printable
+    visibility visible !important
+
+  @media bp-smartphone, bp-tablet, bp-desktop, bp-giants
+    visibility hidden
+  
+
+
+speech(rows-width)
+  @media speech
+    visibility visible !important
+
+  @media bp-smartphone, bp-tablet, bp-desktop, bp-giants, bp-printable
+            visibility hidden

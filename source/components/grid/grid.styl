@@ -4,7 +4,21 @@
     http://foundation.zurb.com/docs/components/grid.html
 \*------------------------------------*/
 
-@require '../../units'
-@require './function'
-@require './styles'
+@import './styles/styles'
+@import './functions/function'
+@import './functions/media_functions--only'
+@import './functions/media_functions'
+@import '../../units'
 
+// ------------------------------------*\
+//   $Media_breakpoints
+//   The breakpoints has been placen in EM,
+//   so, the zoom doesn't affect design
+
+//   You DON'T need device specific breakpoints
+//   but if you want, there are the specifics below
+// \*------------------------------------
+
+@import './definitions/breakpoints'
+
+// my head is hurting me //

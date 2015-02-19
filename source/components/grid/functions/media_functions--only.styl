@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    $Grid-visible-only-on
+\*------------------------------------*/
+
+smartphone--only()
+  @media bp-tablet, bp-desktop, bp-giants, bp-printable
+    visibility hidden
+
+ grid(rows-width, bp-smartphone, columns)
+    clearfix()
+    visibility visible !important   
+  
+smartphone__landscape--only()
+  @media bp-smartphone, bp-tablet, bp-desktop, bp-smartphone__portrait, bp-giants, bp-printable
+              visibility hidden
+
+  grid(rows-width, bp-smartphone__landscape, columns)
+    clearfix()
+    visibility visible !important 
+  
+smartphone__portrait--only()
+  @media bp-smartphone, bp-tablet, bp-smartphone__landscape, bp-desktop, bp-giants, bp-printable
+    visibility hidden
+
+  grid(rows-width, bp-smartphone__portrait, columns)
+    clearfix()
+    visibility visible !important 
+  
+tablet--only()
+  @media bp-smartphone, printable, bp-desktop, bp-giants, bp-printable
+          @media bp-giants
+           visibility hidden
+
+  grid(rows-width, bp-tablet, columns)
+    clearfix()
+    visibility visible !important 
+  
+tablet__landscape--only()
+  @media bp-smartphone, bp-tablet, bp-desktop, bp-giants, bp-printable
+          @media bp-giants
+            visibility hidden
+
+  grid(rows-width, bp-bp-tablet__landscape, columns)
+    clearfix()
+    visibility visible !important 
+  
+tablet__portrait--only()
+  @media bp-smartphone, bp-tablet, bp-printable, bp-desktop
+          @media bp-giants
+            visibility hidden
+            
+  grid(rows-width, bp-tablet__portrait, columns)
+    clearfix()
+    visibility visible !important 
+  
+desktop--only()
+  @media bp-smartphone, bp-tablet, bp-desktop, bp-printable, bp-giants
+            visibility hidden
+  
+  grid(rows-width, bp-desktop, columns)
+    clearfix()
+    visibility visible !important
+    
+giants--only()
+  @media bp-smartphone, bp-tablet, bp-desktop, bp-giants
+          visibility hidden
+          
+  grid(rows-width, bp-giants, columns)
+    clearfix()
+    visibility visible !important  
+  
+printable--only()
+  @media bp-smartphone, bp-tablet, bp-desktop, bp-giants
+          visibility hidden
+
+  @media printable
+    visibility visible !important
+    
